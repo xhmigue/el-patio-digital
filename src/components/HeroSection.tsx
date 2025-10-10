@@ -1,0 +1,99 @@
+import { useState, useEffect } from "react";
+import { Button } from "@/components/ui/button";
+import hero1 from "@/assets/hero-1.jpg";
+import hero2 from "@/assets/hero-2.jpg";
+import hero3 from "@/assets/hero-3.jpg";
+
+const slides = [
+  {
+    image: hero1,
+    title: "CALIDAD, EFICIENCIA",
+    subtitle: "Y DISFRUTAR DE LO QUE HACEMOS.",
+  },
+  {
+    image: hero2,
+    title: "SABOR LOCAL",
+    subtitle: "INGREDIENTES FRESCOS Y DE TEMPORADA",
+  },
+  {
+    image: hero3,
+    title: "EXPERIENCIA ÚNICA",
+    subtitle: "CADA PLATO CUENTA UNA HISTORIA",
+  },
+];
+
+const HeroSection = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
+  const scrollToNosotros = () => {
+    const element = document.getElementById("nosotros");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  return (
+    <section id="inicio" className="relative h-screen w-full overflow-hidden">
+      {slides.map((slide, index) => (
+        <div
+          key={index}
+          className={`absolute inset-0 transition-opacity duration-1000 ${
+            index === currentSlide ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          <img
+            src={slide.image}
+            alt={`Hero ${index + 1}`}
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/50 to-black/70" />
+        </div>
+      ))}
+
+      <div className="relative h-full flex items-center justify-center">
+        <div className="container mx-auto px-6 text-center">
+          <div className="max-w-4xl mx-auto space-y-8">
+            <h1 className="text-5xl md:text-7xl font-bold text-foreground font-serif animate-fade-in">
+              {slides[currentSlide].title}
+            </h1>
+            <p className="text-xl md:text-3xl text-foreground/90 font-light">
+              {slides[currentSlide].subtitle}
+            </p>
+            <div className="pt-4">
+              <Button
+                onClick={scrollToNosotros}
+                variant="outline"
+                className="border-2 border-primary text-foreground hover:bg-primary hover:text-primary-foreground text-lg px-8 py-6 font-semibold"
+              >
+                ESTA ES NUESTRA HISTORIA
+              </Button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Slide Indicators */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex gap-2">
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentSlide(index)}
+            className={`w-3 h-3 rounded-full transition-all ${
+              index === currentSlide ? "bg-primary w-8" : "bg-foreground/50"
+            }`}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
+      </div>
+    </section>
+  );
+};
+
+export default HeroSection;
