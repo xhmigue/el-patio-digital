@@ -7,18 +7,18 @@ import hero3 from "@/assets/hero-3.jpg";
 const slides = [
   {
     image: hero1,
-    title: "CALIDAD, EFICIENCIA",
-    subtitle: "Y DISFRUTAR DE LO QUE HACEMOS.",
+    title: "46 AÑOS DE HISTORIA",
+    subtitle: "FAMILIA Y CONSTANCIA DESDE 1979",
   },
   {
     image: hero2,
-    title: "SABOR LOCAL",
-    subtitle: "INGREDIENTES FRESCOS Y DE TEMPORADA",
+    title: "UN BAR CON ALMA",
+    subtitle: "TRADICIÓN Y CARIÑO EN CADA DETALLE",
   },
   {
     image: hero3,
-    title: "EXPERIENCIA ÚNICA",
-    subtitle: "CADA PLATO CUENTA UNA HISTORIA",
+    title: "ESFUERZO Y PASIÓN",
+    subtitle: "EL LEGADO CONTINÚA",
   },
 ];
 

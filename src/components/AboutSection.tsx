@@ -7,33 +7,52 @@ const AboutSection = () => {
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground">
-              Unidos para construir
-            </h2>
-            <h3 className="text-3xl md:text-4xl font-serif text-primary">
-              Nuevos retos gastronómicos
-            </h3>
+            <div className="mb-8">
+              <p className="text-sm font-semibold text-primary tracking-wider uppercase mb-2">
+                Esta es nuestra historia
+              </p>
+              <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4">
+                Un legado familiar
+              </h2>
+              <h3 className="text-2xl md:text-3xl font-serif text-primary mb-6">
+                que comenzó en 1979
+              </h3>
+            </div>
+            
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Estamos liderados por un equipo multidisciplinar de apasionados por la buena comida.
-              A nuestra larga experiencia en el mundo de la hostelería se unen nuevos miembros
-              venidos del marketing y la ingeniería.
+              En 1979, con mucha ilusión y pocos medios, mi padre abrió un pequeño pub en un local 
+              familiar. Nunca imaginó que aquel "boquete" se convertiría en el proyecto de toda su vida.
             </p>
+            
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Nuestro compromiso es ofrecer ingredientes frescos, mucho espacio, mucha luz, y una
-              pizca de sabor local que hace única cada experiencia.
+              Durante 46 años, trabajó sin descanso, superando altibajos y manteniendo siempre la 
+              constancia que dio estabilidad a su familia. Hoy el relevo lo lleva su hijo, que sigue 
+              haciendo crecer el legado.
             </p>
-            <div className="grid grid-cols-3 gap-4 pt-6">
+            
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              El nombre también guarda historia: mi abuela quería que se llamara La Campana, como el 
+              bar de su hermana. Poco antes de inaugurar, una botella de whisky BELL'S inspiró la 
+              solución perfecta: Campana, pero en inglés.
+            </p>
+            
+            <p className="text-lg text-foreground font-semibold leading-relaxed">
+              Así nació Pub Bell's, un lugar con alma familiar, construido con esfuerzo, cariño y 
+              mucha vida compartida.
+            </p>
+            
+            <div className="grid grid-cols-3 gap-4 pt-8">
               <Card className="p-6 text-center bg-secondary border-none">
-                <p className="text-3xl font-bold text-primary">10+</p>
-                <p className="text-sm text-muted-foreground mt-2">Años de experiencia</p>
+                <p className="text-3xl font-bold text-primary">46</p>
+                <p className="text-sm text-muted-foreground mt-2">Años de historia</p>
               </Card>
               <Card className="p-6 text-center bg-secondary border-none">
-                <p className="text-3xl font-bold text-primary">50+</p>
-                <p className="text-sm text-muted-foreground mt-2">Platos únicos</p>
+                <p className="text-3xl font-bold text-primary">1979</p>
+                <p className="text-sm text-muted-foreground mt-2">Desde</p>
               </Card>
               <Card className="p-6 text-center bg-secondary border-none">
                 <p className="text-3xl font-bold text-primary">100%</p>
-                <p className="text-sm text-muted-foreground mt-2">Pasión</p>
+                <p className="text-sm text-muted-foreground mt-2">Alma familiar</p>
               </Card>
             </div>
           </div>
