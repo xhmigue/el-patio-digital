@@ -59,9 +59,6 @@ const Navigation = () => {
                 >
                   Platos
                 </button>
-                <Link to="/carta" className="text-foreground hover:text-primary transition-colors font-medium">
-                  Menú
-                </Link>
                 <button
                   onClick={() => scrollToSection("contacto")}
                   className="text-foreground hover:text-primary transition-colors font-medium"
@@ -113,13 +110,6 @@ const Navigation = () => {
                 >
                   Platos
                 </button>
-                <Link 
-                  to="/carta" 
-                  className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  Menú
-                </Link>
                 <button
                   onClick={() => scrollToSection("contacto")}
                   className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
