@@ -47,8 +47,8 @@ const AboutSection = () => {
                 <p className="text-sm text-muted-foreground mt-2">Años de historia</p>
               </Card>
               <Card className="p-6 text-center bg-secondary border-none">
-                <p className="text-3xl font-bold text-primary">1979</p>
-                <p className="text-sm text-muted-foreground mt-2">Desde</p>
+                <p className="text-sm text-muted-foreground">Desde</p>
+                <p className="text-3xl font-bold text-primary mt-2">1979</p>
               </Card>
               <Card className="p-6 text-center bg-secondary border-none">
                 <p className="text-3xl font-bold text-primary">100%</p>

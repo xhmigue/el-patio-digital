@@ -2,6 +2,59 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+
+const Navbar = ({ setIsMobileMenuOpen }) => {
+  const navigate = useNavigate();
+
+  const handleNavClick = (sectionId) => {
+    setIsMobileMenuOpen(false);
+
+    if (window.location.pathname !== "/") {
+      // Si NO estás en "/", navega primero
+      navigate(`/#${sectionId}`);
+    } else {
+      // Si ya estás en "/", solo hace scroll
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
+
+  return (
+    <>
+      <button
+        onClick={() => handleNavClick("inicio")}
+        className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
+      >
+        Inicio
+      </button>
+
+      <button
+        onClick={() => handleNavClick("nosotros")}
+        className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
+      >
+        Nosotros
+      </button>
+
+      <button
+        onClick={() => handleNavClick("platos")}
+        className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
+      >
+        Platos
+      </button>
+
+      <button
+        onClick={() => handleNavClick("contacto")}
+        className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
+      >
+        Contacto
+      </button>
+    </>
+  );
+};
+
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -16,6 +69,23 @@ const Navigation = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const navigate = useNavigate();
+
+  const handleNavClick = (sectionId) => {
+    setIsMobileMenuOpen(false);
+
+    if (window.location.pathname !== "/") {
+      // Si NO estás en "/", navega primero
+      navigate(`/#${sectionId}`);
+    } else {
+      // Si ya estás en "/", solo hace scroll
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -67,32 +137,36 @@ const Navigation = () => {
                 </button>
               </>
             ) : (
-              <>
-                <button
-                  onClick={() => scrollToSection("inicio")}
-                  className="text-foreground hover:text-primary transition-colors font-medium"
-                >
-                  Inicio
-                </button>
-                <button
-                  onClick={() => scrollToSection("nosotros")}
-                  className="text-foreground hover:text-primary transition-colors font-medium"
-                >
-                  Nosotros
-                </button>
-                <button
-                  onClick={() => scrollToSection("platos")}
-                  className="text-foreground hover:text-primary transition-colors font-medium"
-                >
-                  Platos
-                </button>
-                <button
-                  onClick={() => scrollToSection("contacto")}
-                  className="text-foreground hover:text-primary transition-colors font-medium"
-                >
-                  Contacto
-                </button>
-              </>
+            
+    <>
+      <button
+        onClick={() => handleNavClick("inicio")}
+        className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
+      >
+        Inicio
+      </button>
+
+      <button
+        onClick={() => handleNavClick("nosotros")}
+        className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
+      >
+        Nosotros
+      </button>
+
+      <button
+        onClick={() => handleNavClick("platos")}
+        className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
+      >
+        Platos
+      </button>
+
+      <button
+        onClick={() => handleNavClick("contacto")}
+        className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
+      >
+        Contacto
+      </button>
+    </>
             )}
             <Link to="/carta">
               <Button variant="default" className="bg-primary text-primary-foreground hover:opacity-90">
@@ -115,30 +189,41 @@ const Navigation = () => {
           <div className="md:hidden mt-4 pb-4 space-y-4">
             {isHomePage ? (
               <>
+            <Link to="/#inicio" onClick={() => setIsMobileMenuOpen(false)}>
                 <button
                   onClick={() => scrollToSection("inicio")}
                   className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
                 >
                   Inicio
                 </button>
+                </Link>
+                
+            <Link to="/#nosotros" onClick={() => setIsMobileMenuOpen(false)}>
                 <button
                   onClick={() => scrollToSection("nosotros")}
                   className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
                 >
                   Nosotros
                 </button>
+                </Link>
+                
+            <Link to="/#platos" onClick={() => setIsMobileMenuOpen(false)}>
                 <button
                   onClick={() => scrollToSection("platos")}
                   className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
                 >
                   Platos
                 </button>
+                </Link>
+                
+            <Link to="/contacto" onClick={() => setIsMobileMenuOpen(false)}>
                 <button
                   onClick={() => scrollToSection("contacto")}
                   className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
                 >
                   Contacto
                 </button>
+              </Link>
               </>
             ) : (
               <Link 
