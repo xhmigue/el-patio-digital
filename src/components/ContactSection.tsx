@@ -14,71 +14,53 @@ const ContactSection = () => {
             Nos importa tu opinión. Sin tu sonrisa esto no sabe igual.
           </p>
         </div>
+<div className="max-w-6xl mx-auto space-y-8">
+  {/* Fila 1: Información en 4 columnas */}
+  <Card className="p-8 bg-card border-border">
+    <h3 className="text-2xl font-serif font-bold text-foreground mb-8 text-center">
+      Información de Contacto
+    </h3>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          <Card className="p-8 bg-card border-border">
-            <h3 className="text-2xl font-serif font-bold text-foreground mb-6">
-              Información de Contacto
-            </h3>
-            <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <MapPin className="text-primary mt-1 flex-shrink-0" size={24} />
-                <div>
-                  <p className="font-semibold text-foreground">Dirección</p>
-                  <p className="text-muted-foreground">Avenida Principal, 14</p>
-                  <p className="text-muted-foreground">29010 Málaga, España</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <Phone className="text-primary mt-1 flex-shrink-0" size={24} />
-                <div>
-                  <p className="font-semibold text-foreground">Teléfono</p>
-                  <p className="text-muted-foreground">+34 952 123 456</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <Mail className="text-primary mt-1 flex-shrink-0" size={24} />
-                <div>
-                  <p className="font-semibold text-foreground">Email</p>
-                  <p className="text-muted-foreground">contacto@elpatiogourmet.com</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <Clock className="text-primary mt-1 flex-shrink-0" size={24} />
-                <div>
-                  <p className="font-semibold text-foreground">Horario</p>
-                  <p className="text-muted-foreground">Lunes a Viernes: 13:00 - 16:00, 20:00 - 23:30</p>
-                  <p className="text-muted-foreground">Sábados y Domingos: 13:00 - 23:30</p>
-                </div>
-              </div>
-            </div>
-          </Card>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {/* Dirección */}
+      <div className="flex flex-col items-center text-center">
+        <MapPin className="text-primary mb-2" size={28} />
+        <p className="font-semibold text-foreground">Dirección</p>
+        <p className="text-muted-foreground text-sm">Calle Juan Carlos I, 73,</p>
+        <p className="text-muted-foreground text-sm">29570 Cártama, Málaga</p>
+      </div>
 
-          <Card className="p-8 bg-card border-border">
-            <h3 className="text-2xl font-serif font-bold text-foreground mb-6">
-              Haz tu Reserva
-            </h3>
-            <p className="text-muted-foreground mb-6">
-              ¿Listo para una experiencia gastronómica inolvidable? Reserva tu mesa ahora.
-            </p>
-            <div className="space-y-4">
-              <Button className="w-full bg-primary text-primary-foreground hover:opacity-90 text-lg py-6">
-                Reservar Mesa
-              </Button>
-              <Button variant="outline" className="w-full border-primary text-foreground hover:bg-primary hover:text-primary-foreground text-lg py-6">
-                Ver Carta Completa
-              </Button>
-            </div>
-            <div className="mt-8 pt-8 border-t border-border">
-              <p className="text-sm text-muted-foreground text-center">
-                ¿Interesado en trabajar con nosotros?
-              </p>
-              <Button variant="link" className="w-full text-primary mt-2">
-                Envía tu CV
-              </Button>
-            </div>
-          </Card>
-        </div>
+      {/* Teléfono */}
+      <div className="flex flex-col items-center text-center">
+        <Phone className="text-primary mb-2" size={28} />
+        <p className="font-semibold text-foreground">Teléfono</p>
+        <p className="text-muted-foreground text-sm">952 422 002</p>
+      </div>
+
+      {/* Horario */}
+      <div className="flex flex-col items-center text-center">
+        <Clock className="text-primary mb-2" size={28} />
+        <p className="font-semibold text-foreground">Horario</p>
+        <p className="text-muted-foreground text-sm">
+          Lunes a Viernes: 8:30 - 13:30, 19:00 - 00:00
+        </p>
+        <p className="text-muted-foreground text-sm">Sábado: 9:00 - 13:00, 19:00 - 00:00</p>
+        <p className="text-muted-foreground text-sm">Domingo: Cerrado</p>
+      </div>
+    </div>
+  </Card>
+
+  {/* Fila 2: Mapa grande */}
+  <Card className="p-0 bg-card border-border overflow-hidden">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3198.517580876309!2d-4.6330624!3d36.7101289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd72ef4640caa05f%3A0xec72a7efad3b96ab!2sPub%20Bells!5e0!3m2!1ses!2ses!4v1760805207106!5m2!1ses!2ses"
+      className="w-full h-[450px] md:h-[600px] rounded-xl"
+      loading="lazy"
+      allowFullScreen
+    ></iframe>
+  </Card>
+</div>
+
       </div>
     </section>
   );
