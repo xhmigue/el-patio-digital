@@ -50,7 +50,7 @@ const Footer = () => {
                 <Facebook className="w-5 h-5 text-muted-foreground group-hover:text-primary-foreground" />
               </a>
               <a
-                href="https://www.instagram.com/pubbells"
+                href="https://www.instagram.com/pub_bells"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center hover:bg-primary transition-colors group"

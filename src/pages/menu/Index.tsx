@@ -4,6 +4,8 @@ import { menuCategories } from "@/data/menuData";
 import { MenuCard } from "@/components/MenuCard";
 import { MenuModal } from "@/components/MenuModal";
 import { Beer } from "lucide-react";
+import Footer from "@/components/Footer";
+import Navigation from "@/components/Navigation";
 
 const Index = () => {
   const [selectedItem, setSelectedItem] = useState<MenuItem | null>(null);
@@ -16,22 +18,8 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="sticky top-0 z-10 bg-card/95 backdrop-blur-sm border-b border-border shadow-lg">
-        <div className="container mx-auto px-4 py-6">
-          <div className="flex items-center justify-center gap-3">
-            <Beer className="w-8 h-8 text-primary" />
-            <div className="text-center">
-              <h1 className="text-4xl font-bold text-foreground tracking-tight">
-                BELL'S
-              </h1>
-              <p className="text-sm text-muted-foreground mt-1">Desde 1979</p>
-            </div>
-            <Beer className="w-8 h-8 text-primary" />
-          </div>
-        </div>
-      </header>
-
+      <Navigation />
+      <div className="py-10" />
       {/* Menu Content */}
       <main className="container mx-auto px-4 py-8">
         <div className="space-y-12">
@@ -58,13 +46,7 @@ const Index = () => {
       </main>
 
       {/* Footer */}
-      <footer className="mt-16 border-t border-border bg-card">
-        <div className="container mx-auto px-4 py-8 text-center">
-          <p className="text-muted-foreground">
-            Â© {new Date().getFullYear()} Bell's Pub - Desde 1979
-          </p>
-        </div>
-      </footer>
+      <Footer />
 
       {/* Modal */}
       <MenuModal

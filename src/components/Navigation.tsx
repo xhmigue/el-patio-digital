@@ -67,9 +67,32 @@ const Navigation = () => {
                 </button>
               </>
             ) : (
-              <Link to="/" className="text-foreground hover:text-primary transition-colors font-medium">
-                Volver al inicio
-              </Link>
+              <>
+                <button
+                  onClick={() => scrollToSection("inicio")}
+                  className="text-foreground hover:text-primary transition-colors font-medium"
+                >
+                  Inicio
+                </button>
+                <button
+                  onClick={() => scrollToSection("nosotros")}
+                  className="text-foreground hover:text-primary transition-colors font-medium"
+                >
+                  Nosotros
+                </button>
+                <button
+                  onClick={() => scrollToSection("platos")}
+                  className="text-foreground hover:text-primary transition-colors font-medium"
+                >
+                  Platos
+                </button>
+                <button
+                  onClick={() => scrollToSection("contacto")}
+                  className="text-foreground hover:text-primary transition-colors font-medium"
+                >
+                  Contacto
+                </button>
+              </>
             )}
             <Link to="/carta">
               <Button variant="default" className="bg-primary text-primary-foreground hover:opacity-90">
