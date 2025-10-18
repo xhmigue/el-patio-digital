@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Button } from "./ui/button";
 
 const menuData = {
   entrantes: [
@@ -33,43 +34,13 @@ const MenuSection = () => {
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Una experiencia culinaria diseñada para deleitar todos tus sentidos
           </p>
+          <br />
+          <br />
+              <Button variant="default" className="w-100 bg-primary text-primary-foreground">
+                Ver Carta
+              </Button>
         </div>
 
-        <div className="max-w-4xl mx-auto">
-          <Tabs defaultValue="entrantes" className="w-full">
-            <TabsList className="grid w-full grid-cols-3 mb-8 bg-secondary">
-              <TabsTrigger value="entrantes" className="text-lg data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
-                Entrantes
-              </TabsTrigger>
-              <TabsTrigger value="principales" className="text-lg data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
-                Principales
-              </TabsTrigger>
-              <TabsTrigger value="postres" className="text-lg data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
-                Postres
-              </TabsTrigger>
-            </TabsList>
-
-            {Object.entries(menuData).map(([category, items]) => (
-              <TabsContent key={category} value={category}>
-                <div className="space-y-4">
-                  {items.map((item, index) => (
-                    <Card key={index} className="p-6 bg-background border-border hover:border-primary transition-colors">
-                      <div className="flex justify-between items-start">
-                        <div className="flex-1">
-                          <h3 className="text-xl font-serif font-semibold text-foreground mb-2">
-                            {item.name}
-                          </h3>
-                          <p className="text-sm text-muted-foreground">{item.description}</p>
-                        </div>
-                        <div className="text-2xl font-bold text-primary ml-4">{item.price}</div>
-                      </div>
-                    </Card>
-                  ))}
-                </div>
-              </TabsContent>
-            ))}
-          </Tabs>
-        </div>
       </div>
     </section>
   );
