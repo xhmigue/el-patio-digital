@@ -28,18 +28,16 @@ const MenuSection = () => {
   return (
     <section id="menu" className="py-20 bg-card">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4">
             Nuestra Carta
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-10">
             Una experiencia culinaria diseñada para deleitar todos tus sentidos
           </p>
-          <br />
-          <br />
-              <Button variant="default" className="w-100 bg-primary text-primary-foreground">
-                Ver Carta
-              </Button>
+            <Button variant="default" className="w-100 bg-primary text-primary-foreground">
+              Ver Carta
+            </Button>
         </div>
 <GallerySection />
       </div>

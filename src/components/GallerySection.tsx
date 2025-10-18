@@ -23,7 +23,6 @@ import bodillos3 from "@/assets/bodillos/3.jpg";
 import bodillos4 from "@/assets/bodillos/4.jpg";
 
 const galleryImages = [
-  dish1, dish2, dish3, dish4,
   tapas1, tapas2, tapas3, tapas4, tapas5, tapas6,
   bodillos1, bodillos2, bodillos3, bodillos4
 ];

@@ -70,7 +70,7 @@ const HeroSection = () => {
               <Button
                 onClick={scrollToNosotros}
                 variant="outline"
-                className="border-2 border-primary text-foreground hover:bg-primary hover:text-primary-foreground text-lg px-8 py-6 font-semibold"
+                className="border-2 border-primary text-foreground bg-primary hover:text-primary-foreground text-lg px-8 py-6 font-semibold"
               >
                 ESTA ES NUESTRA HISTORIA
               </Button>

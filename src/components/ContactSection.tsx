@@ -16,7 +16,6 @@ const ContactSection = () => {
         </div>
 <div className="max-w-6xl mx-auto space-y-8">
   {/* Fila 1: Información en 4 columnas */}
-  <Card className="p-8 bg-card border-border">
     <h3 className="text-2xl font-serif font-bold text-foreground mb-8 text-center">
       Información de Contacto
     </h3>
@@ -30,6 +29,16 @@ const ContactSection = () => {
         <p className="text-muted-foreground text-sm">29570 Cártama, Málaga</p>
       </div>
 
+      {/* Horario */}
+      <div className="flex flex-col items-center text-center">
+        <Clock className="text-primary mb-2" size={28} />
+        <p className="font-semibold text-foreground">Horario</p>
+        <p className="text-muted-foreground text-sm">
+          <strong>Lunes a Viernes</strong>: 8:30 - 13:30, 19:00 - 00:00
+        </p>
+        <p className="text-muted-foreground text-sm"><strong>Sábado</strong>: 9:00 - 13:00, 19:00 - 00:00</p>
+        <p className="text-muted-foreground text-sm"><strong>Domingo</strong>: Cerrado</p>
+      </div>
       {/* Teléfono */}
       <div className="flex flex-col items-center text-center">
         <Phone className="text-primary mb-2" size={28} />
@@ -37,18 +46,7 @@ const ContactSection = () => {
         <p className="text-muted-foreground text-sm">952 422 002</p>
       </div>
 
-      {/* Horario */}
-      <div className="flex flex-col items-center text-center">
-        <Clock className="text-primary mb-2" size={28} />
-        <p className="font-semibold text-foreground">Horario</p>
-        <p className="text-muted-foreground text-sm">
-          Lunes a Viernes: 8:30 - 13:30, 19:00 - 00:00
-        </p>
-        <p className="text-muted-foreground text-sm">Sábado: 9:00 - 13:00, 19:00 - 00:00</p>
-        <p className="text-muted-foreground text-sm">Domingo: Cerrado</p>
-      </div>
     </div>
-  </Card>
 
   {/* Fila 2: Mapa grande */}
   <Card className="p-0 bg-card border-border overflow-hidden">
