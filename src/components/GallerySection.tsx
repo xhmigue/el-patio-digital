@@ -53,12 +53,7 @@ const GallerySection = () => {
 
   return (
     <>
-      <section id="galeria" className="py-20 bg-background">
-        <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4">
-              Galería
-            </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Un vistazo a nuestras deliciosas creaciones
             </p>
@@ -82,8 +77,6 @@ const GallerySection = () => {
               </div>
             ))}
           </div>
-        </div>
-      </section>
 
       <Dialog open={selectedImage !== null} onOpenChange={closeLightbox}>
         <DialogContent className="max-w-5xl bg-black/95 border-border p-0">

@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "./ui/button";
+import GallerySection from "./GallerySection";
 
 const menuData = {
   entrantes: [
@@ -40,7 +41,7 @@ const MenuSection = () => {
                 Ver Carta
               </Button>
         </div>
-
+<GallerySection />
       </div>
     </section>
   );
