@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,39 +39,49 @@ const Navigation = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
-            <button
-              onClick={() => scrollToSection("inicio")}
-              className="text-foreground hover:text-primary transition-colors font-medium"
-            >
-              Inicio
-            </button>
-            <button
-              onClick={() => scrollToSection("nosotros")}
-              className="text-foreground hover:text-primary transition-colors font-medium"
-            >
-              Nosotros
-            </button>
-            <button
-              onClick={() => scrollToSection("platos")}
-              className="text-foreground hover:text-primary transition-colors font-medium"
-            >
-              Platos
-            </button>
-            <button
-              onClick={() => scrollToSection("menu")}
-              className="text-foreground hover:text-primary transition-colors font-medium"
-            >
-              Menú
-            </button>
-            <button
-              onClick={() => scrollToSection("contacto")}
-              className="text-foreground hover:text-primary transition-colors font-medium"
-            >
-              Contacto
-            </button>
-            <Button variant="default" className="bg-primary text-primary-foreground hover:opacity-90">
-              Reserva
-            </Button>
+            {isHomePage ? (
+              <>
+                <button
+                  onClick={() => scrollToSection("inicio")}
+                  className="text-foreground hover:text-primary transition-colors font-medium"
+                >
+                  Inicio
+                </button>
+                <button
+                  onClick={() => scrollToSection("nosotros")}
+                  className="text-foreground hover:text-primary transition-colors font-medium"
+                >
+                  Nosotros
+                </button>
+                <button
+                  onClick={() => scrollToSection("platos")}
+                  className="text-foreground hover:text-primary transition-colors font-medium"
+                >
+                  Platos
+                </button>
+                <button
+                  onClick={() => scrollToSection("menu")}
+                  className="text-foreground hover:text-primary transition-colors font-medium"
+                >
+                  Menú
+                </button>
+                <button
+                  onClick={() => scrollToSection("contacto")}
+                  className="text-foreground hover:text-primary transition-colors font-medium"
+                >
+                  Contacto
+                </button>
+              </>
+            ) : (
+              <Link to="/" className="text-foreground hover:text-primary transition-colors font-medium">
+                Volver al inicio
+              </Link>
+            )}
+            <Link to="/carta">
+              <Button variant="default" className="bg-primary text-primary-foreground hover:opacity-90">
+                Ver Carta
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -83,39 +96,53 @@ const Navigation = () => {
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden mt-4 pb-4 space-y-4">
-            <button
-              onClick={() => scrollToSection("inicio")}
-              className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
-            >
-              Inicio
-            </button>
-            <button
-              onClick={() => scrollToSection("nosotros")}
-              className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
-            >
-              Nosotros
-            </button>
-            <button
-              onClick={() => scrollToSection("platos")}
-              className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
-            >
-              Platos
-            </button>
-            <button
-              onClick={() => scrollToSection("menu")}
-              className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
-            >
-              Menú
-            </button>
-            <button
-              onClick={() => scrollToSection("contacto")}
-              className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
-            >
-              Contacto
-            </button>
-            <Button variant="default" className="w-full bg-primary text-primary-foreground">
-              Reserva
-            </Button>
+            {isHomePage ? (
+              <>
+                <button
+                  onClick={() => scrollToSection("inicio")}
+                  className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
+                >
+                  Inicio
+                </button>
+                <button
+                  onClick={() => scrollToSection("nosotros")}
+                  className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
+                >
+                  Nosotros
+                </button>
+                <button
+                  onClick={() => scrollToSection("platos")}
+                  className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
+                >
+                  Platos
+                </button>
+                <button
+                  onClick={() => scrollToSection("menu")}
+                  className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
+                >
+                  Menú
+                </button>
+                <button
+                  onClick={() => scrollToSection("contacto")}
+                  className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
+                >
+                  Contacto
+                </button>
+              </>
+            ) : (
+              <Link 
+                to="/" 
+                className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Volver al inicio
+              </Link>
+            )}
+            <Link to="/carta" onClick={() => setIsMobileMenuOpen(false)}>
+              <Button variant="default" className="w-full bg-primary text-primary-foreground">
+                Ver Carta
+              </Button>
+            </Link>
           </div>
         )}
       </div>
