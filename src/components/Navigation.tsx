@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import pubBells from "@/assets/pub_bells.webp";
 
 const Navbar = ({ setIsMobileMenuOpen }) => {
   const navigate = useNavigate();
@@ -104,7 +105,12 @@ const Navigation = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-            <h1 className="text-2xl font-serif font-bold text-primary">Pub Bell's</h1>
+               <img
+              src={pubBells}
+              alt="Interior del restaurante"
+              className="rounded-lg shadow-2xl w-[80px] h-[80px] object-cover"
+            />
+          {/*   <h1 className="text-2xl font-serif font-bold text-primary ml-3">Pub Bell's</h1> */}
           </div>
 
           {/* Desktop Menu */}
@@ -216,7 +222,7 @@ const Navigation = () => {
                 </button>
                 </Link>
                 
-            <Link to="/contacto" onClick={() => setIsMobileMenuOpen(false)}>
+            <Link to="/#contacto" onClick={() => setIsMobileMenuOpen(false)}>
                 <button
                   onClick={() => scrollToSection("contacto")}
                   className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"

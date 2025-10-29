@@ -8,6 +8,7 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import LoterySection from "@/components/LoterySection";
 
 const Index = () => {
   const location = useLocation();
@@ -30,6 +31,7 @@ const Index = () => {
       <AboutSection />
       <DishesGallery />
       <MenuSection />
+      <LoterySection />
       <ContactSection />
       <Footer />
     </div>

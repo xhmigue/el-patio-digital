@@ -5,6 +5,8 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
+import { X } from "lucide-react";
+
 
 interface MenuModalProps {
   item: MenuItem | null;
@@ -18,9 +20,15 @@ export const MenuModal = ({ item, open, onOpenChange }: MenuModalProps) => {
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="max-w-2xl bg-card border-border">
+          <button
+            onClick={() => onOpenChange(false)}
+            className="absolute top-4 right-4 z-50 text-white hover:text-primary transition-colors"
+          >
+            <X size={32} />
+          </button>
         <DialogHeader>
           <DialogTitle className="text-3xl font-bold text-foreground">
-            {item.name}
+            {item.name} <i>{item.subtitle ? item.subtitle : ''}</i>
           </DialogTitle>
         </DialogHeader>
         <div className="space-y-4">

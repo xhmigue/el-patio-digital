@@ -21,7 +21,7 @@ export const MenuCard = ({ item, onClick }: MenuCardProps) => {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
           <div className="absolute bottom-4 left-4 right-4">
-            <h3 className="text-xl font-bold text-white mb-1">{item.name}</h3>
+            <h3 className="text-xl font-bold text-white mb-1">{item.name} <i>{item.subtitle ? item.subtitle : ''}</i></h3>
             <p className="text-2xl font-bold text-primary">{item.price}</p>
           </div>
         </div>
@@ -29,7 +29,7 @@ export const MenuCard = ({ item, onClick }: MenuCardProps) => {
       <CardContent className={item.image ? "p-4" : "p-6"}>
         {!item.image && (
           <div className="flex justify-between items-start mb-2">
-            <h3 className="text-lg font-semibold text-foreground">{item.name}</h3>
+            <h3 className="text-lg font-semibold text-foreground">{item.name} {item.subtitle ? (<i>{item.subtitle!}</i>) : ''}</h3>
             <span className="text-xl font-bold text-primary ml-4">{item.price}</span>
           </div>
         )}

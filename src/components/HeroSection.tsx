@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom"; // <-- si usas React Router
 import hero1 from "@/assets/hero-1.jpg";
 import hero2 from "@/assets/hero-2.jpg";
 import hero3 from "@/assets/hero-3.jpg";
@@ -9,16 +10,28 @@ const slides = [
     image: hero1,
     title: "46 AÑOS DE HISTORIA",
     subtitle: "FAMILIA Y CONSTANCIA DESDE 1979",
+    type: "button", // <-- tipo de acción
+    action: "scroll", // scroll = hace scroll
+    section: "nosotros",
+    label: "NUESTRA HISTORIA",
   },
   {
     image: hero2,
     title: "UN BAR CON ALMA",
     subtitle: "TRADICIÓN Y CARIÑO EN CADA DETALLE",
+    type: "link", // <-- tipo link
+    action: "/carta", // ruta
+    label: "VER NUESTRA CARTA",
+    section: ''
   },
   {
     image: hero3,
     title: "ESFUERZO Y PASIÓN",
     subtitle: "EL LEGADO CONTINÚA",
+    type: "button",
+    action: "scroll",
+    section: 'contacto',
+    label: "CONTÁCTANOS",
   },
 ];
 
@@ -32,12 +45,14 @@ const HeroSection = () => {
     return () => clearInterval(timer);
   }, []);
 
-  const scrollToNosotros = () => {
-    const element = document.getElementById("nosotros");
+  const scrollToSection = (section) => {
+    const element = document.getElementById(section);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+  const current = slides[currentSlide];
 
   return (
     <section id="inicio" className="relative h-screen w-full overflow-hidden">
@@ -61,19 +76,36 @@ const HeroSection = () => {
         <div className="container mx-auto px-6 text-center">
           <div className="max-w-4xl mx-auto space-y-8">
             <h1 className="text-5xl md:text-7xl font-bold text-foreground font-serif animate-fade-in">
-              {slides[currentSlide].title}
+              {current.title}
             </h1>
             <p className="text-xl md:text-3xl text-foreground/90 font-light">
-              {slides[currentSlide].subtitle}
+              {current.subtitle}
             </p>
+
             <div className="pt-4">
-              <Button
-                onClick={scrollToNosotros}
-                variant="outline"
-                className="border-2 border-primary text-foreground bg-primary hover:text-primary-foreground text-lg px-8 py-6 font-semibold"
-              >
-                ESTA ES NUESTRA HISTORIA
-              </Button>
+              {/* Render dinámico según tipo */}
+              {current.type === "button" ? (
+                <Button
+                  onClick={
+                    current.action === "scroll"
+                      ? () => scrollToSection(current.section)
+                      : () => console.log("Otra acción")
+                  }
+                  variant="outline"
+                  className="border-2 border-primary text-foreground bg-primary hover:text-primary-foreground text-lg px-8 py-6 font-semibold"
+                >
+                  {current.label}
+                </Button>
+              ) : (
+                <Link to={current.action}>
+                  <Button
+                    variant="outline"
+                    className="border-2 border-primary text-foreground bg-primary hover:text-primary-foreground text-lg px-8 py-6 font-semibold"
+                  >
+                    {current.label}
+                  </Button>
+                </Link>
+              )}
             </div>
           </div>
         </div>

@@ -45,11 +45,11 @@ export const menuCategories: MenuCategory[] = [
     id: "cervezas-barril",
     name: "Barril El Águila Dorada",
     items: [
-      { id: "plato-tonterias", name: "Plato de Tonterías", price: "6,5€", category: "cervezas-barril" },
       { id: "cana", name: "Caña", price: "1,7€", category: "cervezas-barril" },
       { id: "copa", name: "Copa 0,30 cl", price: "2,40€", category: "cervezas-barril" },
       { id: "pinta", name: "Pinta", price: "3,4€", category: "cervezas-barril" },
     ],
+    isOpen: false,
   },
   {
     id: "cervezas",
@@ -71,49 +71,60 @@ export const menuCategories: MenuCategory[] = [
       { id: "salitos", name: "Salitos", price: "3,5€", category: "cervezas" },
       { id: "kopparberg", name: "Kopparberg", price: "3,5€", category: "cervezas" },
     ],
+    isOpen: false,
   },
   {
     id: "vinos",
     name: "Vinos",
     items: [
-      { id: "rioja", name: "Tinto Rioja Rivalia", price: "3€", description: "Botella: 12,5€", category: "vinos" },
+      { id: "rioja", name: "Tinto Rioja Rivalia", subtitle: '(maceración carbonica)',  price: "3€", description: "Botella: 12,5€", category: "vinos" },
       { id: "ribera", name: "Tinto Ribera Prado Marina", price: "2,8€", description: "Botella: 12€", category: "vinos" },
       { id: "rueda", name: "Rueda 100% Verdejo Casa de Castilla", price: "2,8€", description: "Botella: 12€", category: "vinos" },
       { id: "blanco-dulce", name: "Vino Blanco Dulce Árabe", price: "3€", description: "Botella: 12,5€", category: "vinos" },
       { id: "barbadillo", name: "Barbadillo", price: "2,8€", description: "Botella: 12€", category: "vinos" },
       { id: "fragolino", name: "Fragolino", price: "2,8€", description: "Botella: 12€", category: "vinos" },
     ],
+    isOpen: false,
+  },
+  {
+    id: "platotonterias",
+    name: "Plato de Tonterías",
+    items: [
+      { id: "anchoa", name: "Anchoa de Santoña 0'0", price: "1,6€", category: "platotonterias", image: tapa1 },
+      { id: "cerdo-jamon", name: "Cerdo, jamón serrano, pimiento rojo y alioli", price: "1,8€", category: "platotonterias", image: tapa2 },
+      { id: "cerdo-queso", name: "Cerdo, queso curado, lechuga y alioli", price: "1,8€", category: "platotonterias", image: tapa3 },
+      { id: "tropezon", name: "Tropezón", description: 'cerdo,tomate y huevo de codorniz', price: "1,8€", category: "platotonterias", image: tapa4 },
+         ],
+    isOpen: true,
   },
   {
     id: "tapas",
     name: "Tapas",
     items: [
-      { id: "anchoa", name: "Anchoa de Santoña 0'0", price: "1,6€", category: "tapas", image: tapa1 },
-      { id: "cerdo-jamon", name: "Cerdo, jamón serrano, pimiento rojo y alioli", price: "1,8€", category: "tapas", image: tapa2 },
-      { id: "cerdo-queso", name: "Cerdo, queso curado, lechuga y alioli", price: "1,8€", category: "tapas", image: tapa3 },
-      { id: "tropezon", name: "Tropezón", price: "1,8€", category: "tapas", image: tapa4 },
       { id: "queso-curado", name: "Queso Curado", price: "1,5€", category: "tapas", image: tapa5 },
       { id: "salchichon", name: "Salchichón", price: "1,5€", category: "tapas", image: tapa6 },
       { id: "tapas-caseras", name: "Tapas Caseras en Vitrina", price: "1,4€", category: "tapas", image: tapa7 },
       { id: "medias", name: "Medias Raciones", price: "5,8€", category: "tapas", image: tapa8 },
       { id: "medias-especiales", name: "Medias Raciones Especiales", price: "6,5€", category: "tapas", image: tapa9 },
-      { id: "gildas-anchoa", name: "Gildas de Anchoa con Queso", price: "1,5€", category: "tapas", image: tapa10 },
-      { id: "gildas-cecina", name: "Gildas de Cecina con Queso", price: "1,5€", category: "tapas", image: tapa11 },
-      { id: "pinchos-morunos", name: "Pinchos Morunos", price: "1,8€", category: "tapas", image: tapa12 },
-      { id: "pincho-gambon", name: "Pincho de Gambón", price: "2,2€", category: "tapas", image: tapa13 },
+      { id: "gildas-anchoa", name: "Gildas de Anchoa con Queso", subtitle: '(NEW)', price: "1,5€", category: "tapas", image: tapa10 },
+      { id: "gildas-cecina", name: "Gildas de Cecina con Queso", subtitle: '(NEW)', price: "1,5€", category: "tapas", image: tapa11 },
+      { id: "pinchos-morunos", name: "Pinchos Morunos", subtitle: '(NEW)', price: "1,8€", category: "tapas", image: tapa12 },
+      { id: "pincho-gambon", name: "Pincho de Gambón", subtitle: '(NEW)', price: "2,2€", category: "tapas", image: tapa13 },
     ],
+    isOpen: true,
   },
   {
     id: "mini-burgers",
     name: "Mini Burgers",
     items: [
-      { id: "burger-cerdo", name: "Burger de Cerdo", price: "1,70€", category: "mini-burgers", image: tapa14 },
-      { id: "burger-americana", name: "Burger Americana de Ternera", price: "1,9€", category: "mini-burgers", image: tapa15 },
-      { id: "doble-cheese", name: "Doble Cheese Burger", price: "2,6€", category: "mini-burgers", image: tapa16 },
-      { id: "crispy-chicken", name: "Crispy Chicken", price: "1,5€", category: "mini-burgers", image: tapa17 },
-      { id: "burger-mojo", name: "Burger Mojo Picón", price: "1,9€", category: "mini-burgers", image: tapa18 },
-      { id: "perrito", name: "Perrito", price: "1,3€", category: "mini-burgers", image: tapa19 },
+      { id: "burger-cerdo", name: "Burger de Cerdo", description:"Con bacon, queso, cebolla a la plancha y alioli", price: "1,70€", category: "mini-burgers", image: tapa14 },
+      { id: "burger-americana", name: "Burger Americana de Ternera", description:"Queso cheddar, salsa americana y pepinillo", price: "1,9€", category: "mini-burgers", image: tapa15 },
+      { id: "doble-cheese", name: "Doble Cheese Burger", description:"Doble carne de ternera, queso cheddar, queso edam y kétchup", price: "2,6€", category: "mini-burgers", image: tapa16 },
+      { id: "crispy-chicken", name: "Crispy Chicken", description:"Pollo, tomate y alioli", price: "1,5€", category: "mini-burgers", image: tapa17 },
+      { id: "burger-mojo", name: "Burger Mojo Picón", description:"Ternera, mojo picón, queso y lechuga", price: "1,9€", category: "mini-burgers", image: tapa18 },
+      { id: "perrito", name: "Perrito", description:"Cebolla crujiente y kétchup", price: "1,3€", category: "mini-burgers", image: tapa19 },
     ],
+    isOpen: true,
   },
   {
     id: "mini-camperos",
@@ -123,31 +134,92 @@ export const menuCategories: MenuCategory[] = [
       { id: "mixto", name: "Mixto", price: "1,5€", description: "York, queso y mantequilla", category: "mini-camperos", image: bodillo2 },
       { id: "bells", name: "Bell's", price: "2,6€", description: "Pollo asado, carne mechada, queso, tomate, lechuga y alioli", category: "mini-camperos", image: bodillo3 },
       { id: "plumi", name: "Plumi", price: "2,3€", description: "Tortilla de patata, carne mechada y alioli", category: "mini-camperos", image: bodillo4 },
-      { id: "pollo-guacamole", name: "Pollo con Guacamole", price: "1,5€", category: "mini-camperos", image: bodillo5 },
-      { id: "iberito", name: "Iberito", price: "2,1€", description: "Pulga de crema de jamón ibérico y carne mechada", category: "mini-camperos", image: bodillo6 },
-      { id: "serranito", name: "Serranito", price: "1,80€", description: "Filete de cerdo, jamón serrano, pimiento rojo y alioli", category: "mini-camperos", image: bodillo7 },
-      { id: "bacon-queso", name: "Bacon Queso", price: "1,5€", description: "Alioli", category: "mini-camperos", image: bodillo8 },
-      { id: "cristabells", name: "Cristabel's", price: "2,8€", description: "Pan cristal, solomillo al whisky, mayo trufada con un toque de lima", category: "mini-camperos", image: bodillo9 },
-    ],
+       ],
+    isOpen: true
+  },
+  {
+    id: "pulguitas",
+    name: "Pulguitas",
+    items: [ { id: "pollo-guacamole", name: "Pollo con Guacamole", price: "1,5€", category: "pulguitas", image: bodillo5 },
+     { id: "toritillapatatas", name: "Tortilla de Patatas", price: "1,5€", description: "Con alioli", category: "pulguitas", image: bodillo2 },
+      { id: "carnemechada", name: "Carne Mechada", price: "1,5€", description: "Con alioli", category: "pulguitas", image: bodillo3 },
+      { id: "serranito", name: "Serranito", price: "1,8€", description: "Filete de cerdo, jamón serrano, pimiento rojo y alioli", category: "pulguitas", image: bodillo4 },
+      { id: "baconqueso", name: "Bacon Queso", price: "1,5€", description: "Alioli", category: "pulguitas", image: bodillo4 },
+      ],
+    isOpen: true
   },
   {
     id: "rollitos",
     name: "Rollitos",
     items: [
       { id: "mini-kebab", name: "Mini Kebab", price: "1,9€", description: "Kebab de pollo, lechuga, cebolla plancha y salsa kebab", category: "rollitos", image: bodillo10 },
-      { id: "fajita", name: "Fajita", price: "1,9€", description: "Con pollo, salteado de pimientos, un toque de pique", category: "rollitos", image: bodillo11 },
-      { id: "burrito", name: "Burrito", price: "2,5€", description: "Pulled pork con cheddar y guacamole", category: "rollitos", image: bodillo12 },
+      { id: "fajita", name: "Fajita", subtitle:"(NEW)", price: "1,9€", description: "Con pollo, salteado de pimientos, un toque de pique", category: "rollitos", image: bodillo11 },
+      { id: "burrito", name: "Burrito", subtitle:"(NEW)", price: "2,5€", description: "Pulled pork con cheddar y guacamole", category: "rollitos", image: bodillo12 },
     ],
-  },
-  {
-    id: "tapas-gourmet",
-    name: "Tapas Gourmet",
-    items: [
-      { id: "mini-black-bomb", name: "Mini Black Bomb", price: "2,6€", description: "43g de carne black angus en pan brioche, crema de queso, confitura de tomate", category: "tapas-gourmet", image: bodillo13 },
-      { id: "mini-black-angus", name: "Mini Black Angus", price: "2,6€", description: "43g de carne black angus, queso cheddar y tomate", category: "tapas-gourmet", image: bodillo14 },
-      { id: "cremoso", name: "Cremoso", price: "1,7€", description: "Pulga con cerdo, crema de queso y cebolla caramelizada", category: "tapas-gourmet", image: bodillo15 },
-      { id: "flori", name: "Flori", price: "2,6€", description: "Pulga de filete de cerdo, queso curado, huevo de codorniz, lechuga y alioli", category: "tapas-gourmet", image: bodillo16 },
-      { id: "kapsule", name: "Kapsule Korp", price: "2,8€", description: "Pan brioche, pulled pork casero con cebolla morada y alioli", category: "tapas-gourmet", image: bodillo17 },
-    ],
-  },
+    isOpen: true
+  },{
+  id: "tapas-gourmet",
+  name: "Tapas Gourmet",
+  items: [
+    {
+      id: "mini-black-bomb",
+      name: "Mini Black Bomb",
+      price: "2,6€",
+      description: "43g de carne black angus en pan brioche, crema de queso curado y confitura de tomate",
+      category: "tapas-gourmet",
+      image: bodillo13
+    },
+    {
+      id: "mini-black-angus",
+      name: "Mini Black Angus",
+      price: "2,6€",
+      description: "43g de carne black angus, queso cheddar y tomate",
+      category: "tapas-gourmet",
+      image: bodillo14
+    },
+    {
+      id: "iberito",
+      name: "Iberito",
+      price: "2,1€",
+      description: "Pulga de crema de jamón ibérico y carne mechada",
+      category: "tapas-gourmet",
+      image: bodillo17
+    },
+    {
+      id: "cremoso",
+      name: "Cremoso",
+      price: "1,7€",
+      description: "Pulga con cerdo, crema de queso y cebolla caramelizada",
+      category: "tapas-gourmet",
+      image: bodillo15
+    },
+    {
+      id: "flori",
+      name: "Flori",
+      price: "2,6€",
+      description: "Pulga de filete de cerdo, queso curado, huevo de codorniz, lechuga y alioli",
+      category: "tapas-gourmet",
+      image: bodillo16
+    },
+    {
+      id: "kapsule",
+      name: "Kapsule Korp",
+      subtitle:"(NEW)",
+      price: "2,8€",
+      description: "Pan brioche, pulled pork casero con cebolla morada y alioli",
+      category: "tapas-gourmet",
+      image: bodillo17
+    },
+    {
+      id: "cristabells",
+      name: "Cristabell’s",
+      subtitle:"(NEW)",
+      price: "2,8€",
+      description: "Pan cristal, solomillo al whisky, mayo trufada con un toque de lima",
+      category: "tapas-gourmet",
+      image: bodillo17
+    }
+  ],
+  isOpen: true
+}
 ];

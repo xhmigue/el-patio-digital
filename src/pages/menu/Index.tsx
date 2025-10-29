@@ -27,7 +27,7 @@ const Index = () => {
             <section key={category.id} id={category.id}>
               <div className="mb-6">
                 <h2 className="text-3xl font-bold text-primary mb-2">
-                  {category.name}
+                  {category.name} 
                 </h2>
                 <div className="h-1 w-20 bg-accent rounded-full"></div>
               </div>
@@ -36,7 +36,7 @@ const Index = () => {
                   <MenuCard
                     key={item.id}
                     item={item}
-                    onClick={() => handleItemClick(item)}
+                    onClick={category.isOpen ? () => handleItemClick(item) : ()=>{}}
                   />
                 ))}
               </div>
