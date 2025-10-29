@@ -11,7 +11,7 @@ const AvisoLegal = () => {
         </h1>
         
         <div className="prose prose-invert max-w-none space-y-6 text-muted-foreground">
-          <section>
+           <section>
             <h2 className="text-2xl font-serif font-bold text-foreground mb-4">
               1. Datos Identificativos
             </h2>

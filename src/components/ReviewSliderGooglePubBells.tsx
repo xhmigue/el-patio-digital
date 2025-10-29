@@ -13,58 +13,60 @@ interface Review {
 
 const reviewsData: Review[] = [
   {
-    name: "Álvaro M.",
-    date: "Octubre 2025",
-    text: "Increíble ambiente y la comida espectacular. Los bodillos son los mejores que he probado. El personal muy atento y servicial.",
-    googleLink: "https://www.google.com/maps/place/Pub+Bell's"
+    name: "Francisco Javier",
+    date: "Hace un mes",
+    text: "Buenas me hacen una tortilla a la francesa y al lado una rodajas de tomate y un café súper bueno más que bueno para mi un 10 se queda corto.",
+    googleLink: "https://share.google/eVyJWJyONsIQGbkBY"
   },
   {
-    name: "María G.",
-    date: "Septiembre 2025",
-    text: "Un sitio perfecto para ir con amigos. Las tapas son deliciosas y los precios muy razonables. Sin duda volveremos.",
-    googleLink: "https://www.google.com/maps/place/Pub+Bell's"
+    name: "Noemí",
+    date: "Hace una semana",
+    text: `Todo está buenísimo, son rápidos en atender y los Camareros son muy amables.
+Ay muy buen ambiente, y tienen terraza. En el mismo bar se puede echar la primitiva ,es administración.`,
+    googleLink: "https://share.google/vz1bXXKobMBrHp0Ra"
   },
   {
-    name: "Carlos R.",
-    date: "Octubre 2025",
-    text: "La mejor experiencia en un pub. Música en vivo fantástica y el servicio de 10. Las hamburguesas están increíbles.",
-    googleLink: "https://www.google.com/maps/place/Pub+Bell's"
+    name: "Pepe",
+    date: "Hace un año",
+    text: `No es solo un bar, es un lugar
+Que a las personas de fuera del pueblo nos facilita recoger los pedidos online, además del servicio que como administración y bar hace, y lo hace bien, yo suelo tomar algo o meter algo a la loteria cosa q no suelo hacer, pero creo q ayudo a que siga dando ese servicio, gracias.`,
+    googleLink: "https://share.google/1TS0zziKVettwn7KF"
   },
   {
-    name: "Laura S.",
-    date: "Septiembre 2025",
-    text: "Excelente lugar para cenar. La variedad de la carta es impresionante y todo está buenísimo. Muy recomendable.",
-    googleLink: "https://www.google.com/maps/place/Pub+Bell's"
+    name: "Andrea",
+    date: "Hace un año",
+    text: `Voy muy a menudo y seguiría sin dudarlo, a todas las horas es maravilloso: desayuno, cena, tardeo…`,
+    googleLink: "https://share.google/s907X644IUR2QbTwe"
   },
   {
-    name: "Javier P.",
-    date: "Agosto 2025",
-    text: "Un pub con mucho encanto. La terraza es genial y el ambiente muy acogedor. Las cervezas artesanales son de primera.",
-    googleLink: "https://www.google.com/maps/place/Pub+Bell's"
+    name: "Lorena",
+    date: "Hace 2 años",
+    text: `Desayunos buenísimos y si vas de noche tienen unas tapas exquisitas,camarer@s muy simpaticos 100% recomendable`,
+    googleLink: "https://share.google/eWvYNGLrOYLTLn6QN"
   },
   {
-    name: "Ana B.",
-    date: "Octubre 2025",
-    text: "Nos encantó la experiencia. La comida casera y de calidad. El personal súper amable. Repetiremos seguro.",
-    googleLink: "https://www.google.com/maps/place/Pub+Bell's"
+    name: "Lope",
+    date: "Hace 1 año",
+    text: `Hace tiempo que no voy pero en Cartama el mejor sitio para tomar algo.`,
+    googleLink: "https://share.google/FksGtSIsmxPBXvqwZ"
   },
   {
-    name: "Roberto L.",
-    date: "Septiembre 2025",
-    text: "Sitio ideal para tomar unas tapas y unas cañas. Los fines de semana con música en vivo está genial. Muy buen rollo.",
-    googleLink: "https://www.google.com/maps/place/Pub+Bell's"
+    name: "José",
+    date: "Hace 2 años",
+    text: "Un bar familiar en centro del pueblo con buena atencion y variedad de servicios( loterias y apuestas, retirada paquetes,...)",
+    googleLink: "https://share.google/KBnCJfyuEDNte9hLb"
   },
   {
-    name: "Patricia F.",
-    date: "Agosto 2025",
-    text: "Un lugar que no decepciona. Buena comida, buen ambiente y precios justos. Los bodillos son espectaculares.",
-    googleLink: "https://www.google.com/maps/place/Pub+Bell's"
+    name: "Cintia B.",
+    date: "Hace 3 años",
+    text: "Variedad de tapas a muy buenos precios. Buen servicio. Aunque no me hayan regalado la camiseta del pub, le doy 5 estrellas",
+    googleLink: "https://share.google/vuDhsktfhbUrEC7Ri"
   },
   {
-    name: "Miguel D.",
-    date: "Octubre 2025",
-    text: "Excelente atención y comida de calidad. El local es muy acogedor y tiene un ambiente familiar. Totalmente recomendable.",
-    googleLink: "https://www.google.com/maps/place/Pub+Bell's"
+    name: "Joaquin",
+    date: "Hace 5 años",
+    text: "Gran lugar para ver los partidos de fútbol, en especial los de F.C. Barcelona.",
+    googleLink: "https://share.google/RmWCUsrjvAWc8TbNs"
   }
 ];
 
@@ -104,13 +106,13 @@ const ReviewSliderGooglePubBells = () => {
     emblaApi.on("reInit", onSelect);
   }, [emblaApi, onSelect]);
 
-  // Auto-scroll every 5 seconds
+  // Auto-scroll every 2 seconds
   useEffect(() => {
     if (!emblaApi || isPaused) return;
 
     const autoplay = setInterval(() => {
       emblaApi.scrollNext();
-    }, 5000);
+    }, 2000);
 
     return () => clearInterval(autoplay);
   }, [emblaApi, isPaused]);
