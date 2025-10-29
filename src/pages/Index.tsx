@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import LoterySection from "@/components/LoterySection";
+import ReviewSliderGooglePubBells from "@/components/ReviewSliderGooglePubBells";
 
 const Index = () => {
   const location = useLocation();
@@ -32,6 +33,7 @@ const Index = () => {
       <DishesGallery />
       <MenuSection />
       <LoterySection />
+      <ReviewSliderGooglePubBells />
       <ContactSection />
       <Footer />
     </div>
