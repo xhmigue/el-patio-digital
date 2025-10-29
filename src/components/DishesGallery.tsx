@@ -1,28 +1,32 @@
-import dish1 from "@/assets/dish-1.jpg";
-import dish2 from "@/assets/dish-2.jpg";
-import dish3 from "@/assets/dish-3.jpg";
-import dish4 from "@/assets/dish-4.jpg";
+import tapa1 from "@/assets/tapas/27.jpg";
+import bodillo3 from "@/assets/bodillos/3.jpg";
+import tapa15 from "@/assets/tapas/15.jpg";
+import bodillo17 from "@/assets/bodillos/17.jpg";
 
 const dishes = [
   {
-    image: dish1,
-    title: "Pulpo a la Parrilla",
-    description: "Con pimentón de la Vera y aceite de oliva virgen extra",
+    image: tapa1,
+    title: "Plato de Tonterías",
+    description: `
+      Anchoa de Santoña 0'0.\n
+      Cerdo, jamón serrano, pimiento rojo y alioli.\n
+      Cerdo, queso curado, lechuga y alioli.\n
+      Tropezón.\n`,
   },
   {
-    image: dish2,
-    title: "Burrata Fresca",
-    description: "Con tomates cherry confitados y albahaca",
+    image: bodillo17,
+    title: "Kapsule Korp (NEW)",
+    description: "Pan brioche, pulled pork casero con cebolla morada y alioli.",
   },
   {
-    image: dish3,
-    title: "Tartar de Ternera",
-    description: "Con yema de huevo y microgreens",
+    image: bodillo3,
+    title: "Campero Bell’s",
+    description: "Pollo asado, carne mechada, queso, tomate, lechuga y alioli.",
   },
   {
-    image: dish4,
-    title: "Paella Mediterránea",
-    description: "Con marisco fresco y azafrán",
+    image: tapa15,
+    title: "Americana",
+    description: "Burger americana de ternera con queso cheddar, salsa americana y pepinillo.",
   },
 ];
 

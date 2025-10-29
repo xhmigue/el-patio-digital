@@ -1,104 +1,160 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-
+import { Link } from "react-router-dom";
+const email = "['Pin tu email aqui']";
+const movil = (
+  <a href="tel:952422002" className="text-foreground underline">
+    952 422 002
+  </a>
+);
 const PoliticaPrivacidad = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
       <div className="container mx-auto px-6 py-20 max-w-4xl">
         <h1 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-8">
-          Política de Privacidad
+          Política de Privacidad de Pub Bell&apos;s (Web Informativa)
         </h1>
-        
+
         <div className="prose prose-invert max-w-none space-y-6 text-muted-foreground">
           <section>
             <h2 className="text-2xl font-serif font-bold text-foreground mb-4">
               1. Responsable del Tratamiento
             </h2>
             <p>
-              En cumplimiento del Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo, de 27 de abril de 2016, relativo a la protección de las personas físicas en lo que respecta al tratamiento de datos personales (RGPD), le informamos de los siguientes datos:
+              El Responsable del Tratamiento de los datos recabados a través de
+              esta web es:
             </p>
             <ul className="list-disc pl-6 space-y-2">
-              <li><strong>Responsable:</strong> Pub Bell's</li>
-              <li><strong>Dirección:</strong> Av. de Málaga, 25, 29570 Cártama, Málaga</li>
-              <li><strong>Teléfono:</strong> 952 422 002</li>
+              <li>
+                <strong>Responsable Legal:</strong> Francisco Javier Guerrero
+                Bedoya
+              </li>
+              <li>
+                <strong>NIF:</strong> 74868384A
+              </li>
+              <li>
+                <strong>Denominación Comercial:</strong> Pub Bell&apos;s
+              </li>
+              <li>
+                <strong>Dirección (Legal/Notificaciones):</strong> C/ Juan
+                Carlos I 73, Cártama-29570, Málaga
+              </li>
+              <li>
+                <strong>Teléfono:</strong> {movil}
+              </li>
+              <li>
+                <strong>Correo Electrónico:</strong> {email}
+              </li>
             </ul>
           </section>
 
           <section>
             <h2 className="text-2xl font-serif font-bold text-foreground mb-4">
-              2. Finalidad del Tratamiento
+              2. Datos Tratados y Finalidad
             </h2>
             <p>
-              Los datos personales que nos proporcione serán tratados con las siguientes finalidades:
+              Dado que esta web es únicamente informativa y muestra la carta del
+              restaurante, el Responsable no recoge, almacena ni trata
+              directamente datos personales de los usuarios a través de
+              formularios, suscripciones o cualquier otra vía.
+            </p>
+
+            <p>
+              <strong>Único Tratamiento de Datos:</strong>
             </p>
             <ul className="list-disc pl-6 space-y-2">
-              <li>Gestionar las reservas y pedidos realizados a través de nuestra web o teléfono</li>
-              <li>Responder a las consultas y solicitudes de información</li>
-              <li>Enviar comunicaciones comerciales, si ha otorgado su consentimiento</li>
-              <li>Mejorar la calidad de nuestros servicios</li>
+              <li>
+                <strong>Datos de Navegación (IP):</strong> El servidor donde
+                está alojada la web puede registrar de forma temporal la
+                dirección IP de los usuarios y otros datos técnicos (navegador,
+                fecha y hora de acceso) para el mantenimiento de la seguridad y
+                el correcto funcionamiento del servicio. Estos datos se eliminan
+                automáticamente conforme a las políticas del proveedor de
+                hosting.
+              </li>
+              <li>
+                <strong>Finalidad:</strong> Garantizar la seguridad y el
+                correcto funcionamiento de la página web.
+              </li>
+              <li>
+                <strong>Legitimación:</strong> Interés legítimo del responsable
+                (Artículo 6.1.f RGPD).
+              </li>
             </ul>
           </section>
 
           <section>
             <h2 className="text-2xl font-serif font-bold text-foreground mb-4">
-              3. Legitimación
+              3. Tratamiento de Datos por Llamada Telefónica
             </h2>
             <p>
-              La base legal para el tratamiento de sus datos es:
+              El número de teléfono mostrado en la web ({movil}) es una vía de
+              contacto directo con el restaurante.
             </p>
             <ul className="list-disc pl-6 space-y-2">
-              <li>El consentimiento del interesado</li>
-              <li>La ejecución de un contrato en el que el interesado es parte</li>
-              <li>El interés legítimo del responsable</li>
+              <li>
+                El Responsable del Tratamiento no tiene acceso a los datos de la
+                llamada (número de origen, hora) a menos que el usuario los
+                facilite de forma voluntaria durante la conversación.
+              </li>
+              <li>
+                Los datos personales que se faciliten durante la llamada
+                telefónica para la gestión de un servicio (por ejemplo, una
+                reserva de mesa) se tratarán únicamente con la finalidad de
+                ejecutar ese servicio solicitado (Artículo 6.1.b RGPD).
+              </li>
             </ul>
           </section>
 
           <section>
             <h2 className="text-2xl font-serif font-bold text-foreground mb-4">
-              4. Destinatarios
+              4. Destinatarios y Derechos
             </h2>
-            <p>
-              Sus datos no serán cedidos a terceros, salvo obligación legal. No se realizan transferencias internacionales de datos.
-            </p>
+            <ul className="list-disc pl-6 space-y-2">
+              <li>
+                <strong>Destinatarios:</strong> Los datos de navegación no se
+                ceden a terceros, salvo obligación legal o a nuestro proveedor
+                de hosting como Encargado del Tratamiento.
+              </li>
+              <li>
+                <strong>Derechos del Usuario:</strong> Aunque el tratamiento de
+                datos es mínimo, usted puede ejercer sus derechos de Acceso,
+                Rectificación, Supresión, Limitación, Oposición y Portabilidad
+                de los datos que, en su caso, hayan podido ser tratados por el
+                Responsable, contactando con la dirección postal o correo
+                electrónico indicados en el punto 1.
+              </li>
+              <li>
+                Asimismo, le asiste el derecho a presentar una reclamación ante
+                la Agencia Española de Protección de Datos (AEPD).
+              </li>
+            </ul>
           </section>
 
           <section>
             <h2 className="text-2xl font-serif font-bold text-foreground mb-4">
-              5. Derechos del Usuario
+              5. Cookies
             </h2>
             <p>
-              Usted tiene derecho a:
+              Este sitio web utiliza cookies técnicas estrictamente necesarias
+              para la correcta visualización de la carta o para garantizar la
+              seguridad de la navegación. Estas cookies son esenciales y no
+              requieren consentimiento.
             </p>
             <ul className="list-disc pl-6 space-y-2">
-              <li>Acceder a sus datos personales</li>
-              <li>Solicitar la rectificación de datos inexactos</li>
-              <li>Solicitar la supresión de sus datos</li>
-              <li>Solicitar la limitación del tratamiento de sus datos</li>
-              <li>Oponerse al tratamiento de sus datos</li>
-              <li>Solicitar la portabilidad de sus datos</li>
+              <li>
+                No se utilizan cookies de terceros (como Google Analytics, redes
+                sociales, etc.) para rastrear al usuario.
+              </li>
+              <li>
+                Para más detalles sobre las cookies utilizadas, consulte la{" "}
+                <Link to="/politica-cookies" className="text-foreground underline">
+                  Política de Cookies
+                </Link>
+                .
+              </li>
             </ul>
-            <p className="mt-4">
-              Para ejercer estos derechos, puede contactarnos en Av. de Málaga, 25, 29570 Cártama, Málaga, o llamando al 952 422 002.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-serif font-bold text-foreground mb-4">
-              6. Conservación de Datos
-            </h2>
-            <p>
-              Los datos se conservarán durante el tiempo necesario para cumplir con la finalidad para la que se recabaron y para determinar las posibles responsabilidades que se pudieran derivar de dicha finalidad y del tratamiento de los datos.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-serif font-bold text-foreground mb-4">
-              7. Cookies
-            </h2>
-            <p>
-              Este sitio web utiliza cookies técnicas necesarias para su correcto funcionamiento. Al navegar por el sitio web, usted acepta el uso de estas cookies.
-            </p>
           </section>
         </div>
       </div>

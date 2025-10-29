@@ -33,6 +33,12 @@ const Footer = () => {
               >
                 Política de Privacidad
               </Link>
+              <Link 
+                to="/politica-cookies" 
+                className="text-sm text-muted-foreground hover:text-primary transition-colors"
+              >
+              Política de Cookies
+              </Link>
             </div>
           </div>
 

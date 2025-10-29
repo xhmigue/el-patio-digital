@@ -36,7 +36,7 @@ const Navbar = ({ setIsMobileMenuOpen }) => {
         onClick={() => handleNavClick("nosotros")}
         className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
       >
-        Nosotros
+        Quiénes Somos
       </button>
 
       <button
@@ -55,7 +55,6 @@ const Navbar = ({ setIsMobileMenuOpen }) => {
     </>
   );
 };
-
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -99,18 +98,20 @@ const Navigation = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-background/95 backdrop-blur-sm shadow-lg" : "bg-transparent"
+        isScrolled
+          ? "bg-background/95 backdrop-blur-sm shadow-lg"
+          : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-               <img
+            <img
               src={pubBells}
               alt="Interior del restaurante"
               className="rounded-lg shadow-2xl w-[80px] h-[80px] object-cover"
             />
-          {/*   <h1 className="text-2xl font-serif font-bold text-primary ml-3">Pub Bell's</h1> */}
+            {/*   <h1 className="text-2xl font-serif font-bold text-primary ml-3">Pub Bell's</h1> */}
           </div>
 
           {/* Desktop Menu */}
@@ -127,7 +128,7 @@ const Navigation = () => {
                   onClick={() => scrollToSection("nosotros")}
                   className="text-foreground hover:text-primary transition-colors font-medium"
                 >
-                  Nosotros
+                  Quiénes Somos
                 </button>
                 <button
                   onClick={() => scrollToSection("platos")}
@@ -141,41 +142,52 @@ const Navigation = () => {
                 >
                   Contacto
                 </button>
+                <button
+                  onClick={() => scrollToSection("reseñas")}
+                  className="text-foreground hover:text-primary transition-colors font-medium"
+                >
+                  Reseñas
+                </button>
               </>
             ) : (
-            
-    <>
-      <button
-        onClick={() => handleNavClick("inicio")}
-        className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
-      >
-        Inicio
-      </button>
-
-      <button
-        onClick={() => handleNavClick("nosotros")}
-        className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
-      >
-        Nosotros
-      </button>
-
-      <button
-        onClick={() => handleNavClick("platos")}
-        className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
-      >
-        Platos
-      </button>
-
-      <button
-        onClick={() => handleNavClick("contacto")}
-        className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
-      >
-        Contacto
-      </button>
-    </>
+              <>
+                <button
+                  onClick={() => handleNavClick("inicio")}
+                  className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
+                >
+                  Inicio
+                </button>
+                <button
+                  onClick={() => handleNavClick("nosotros")}
+                  className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
+                >
+                  Quiénes Somos
+                </button>
+                <button
+                  onClick={() => handleNavClick("platos")}
+                  className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
+                >
+                  Platos
+                </button>
+                <button
+                  onClick={() => handleNavClick("contacto")}
+                  className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
+                >
+                  Contacto
+                </button>
+                <button
+                  onClick={() => handleNavClick("reseñas")}
+                  className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
+                >
+                  Reseñas
+                </button>
+              </>
             )}
             <Link to="/carta">
-              <Button variant="default" className="bg-primary text-primary-foreground hover:opacity-90">
+              <Button
+                variant="default"
+                className="bg-primary text-primary-foreground hover:opacity-90"
+              >
                 Ver Carta
               </Button>
             </Link>
@@ -195,45 +207,59 @@ const Navigation = () => {
           <div className="md:hidden mt-4 pb-4 space-y-4">
             {isHomePage ? (
               <>
-            <Link to="/#inicio" onClick={() => setIsMobileMenuOpen(false)}>
-                <button
-                  onClick={() => scrollToSection("inicio")}
-                  className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
-                >
-                  Inicio
-                </button>
+                <Link to="/#inicio" onClick={() => setIsMobileMenuOpen(false)}>
+                  <button
+                    onClick={() => scrollToSection("inicio")}
+                    className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
+                  >
+                    Inicio
+                  </button>
                 </Link>
-                
-            <Link to="/#nosotros" onClick={() => setIsMobileMenuOpen(false)}>
-                <button
-                  onClick={() => scrollToSection("nosotros")}
-                  className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
+
+                <Link
+                  to="/#nosotros"
+                  onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Nosotros
-                </button>
+                  <button
+                    onClick={() => scrollToSection("nosotros")}
+                    className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
+                  >
+                    Quiénes Somos
+                  </button>
                 </Link>
-                
-            <Link to="/#platos" onClick={() => setIsMobileMenuOpen(false)}>
-                <button
-                  onClick={() => scrollToSection("platos")}
-                  className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
-                >
-                  Platos
-                </button>
+
+                <Link to="/#platos" onClick={() => setIsMobileMenuOpen(false)}>
+                  <button
+                    onClick={() => scrollToSection("platos")}
+                    className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
+                  >
+                    Platos
+                  </button>
                 </Link>
-                
-            <Link to="/#contacto" onClick={() => setIsMobileMenuOpen(false)}>
-                <button
-                  onClick={() => scrollToSection("contacto")}
-                  className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
+
+                <Link
+                  to="/#contacto"
+                  onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Contacto
-                </button>
-              </Link>
+                  <button
+                    onClick={() => scrollToSection("contacto")}
+                    className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
+                  >
+                    Contacto
+                  </button>
+                </Link>
+                <Link to="/#reseñas" onClick={() => setIsMobileMenuOpen(false)}>
+                  <button
+                    onClick={() => scrollToSection("reseñas")}
+                    className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
+                  >
+                    Reseñas
+                  </button>
+                </Link>
               </>
             ) : (
-              <Link 
-                to="/" 
+              <Link
+                to="/"
                 className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
@@ -241,7 +267,10 @@ const Navigation = () => {
               </Link>
             )}
             <Link to="/carta" onClick={() => setIsMobileMenuOpen(false)}>
-              <Button variant="default" className="w-full bg-primary text-primary-foreground">
+              <Button
+                variant="default"
+                className="w-full bg-primary text-primary-foreground"
+              >
                 Ver Carta
               </Button>
             </Link>
