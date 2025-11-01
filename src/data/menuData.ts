@@ -40,6 +40,26 @@ import tapa18 from "@/assets/tapas/18.jpg";
 import tapa19 from "@/assets/tapas/19.jpg";
 import tapa20 from "@/assets/tapas/20.jpg";
 
+// Import images (Platillos)
+import anchoa from "@/assets/platillos/anchoa.jpg";
+import burgerDeCerdo from "@/assets/platillos/burger_de_cerdo.jpg";
+import camperoPolloAsado from "@/assets/platillos/campero_pollo_asado.jpg";
+import crispaChicken from "@/assets/platillos/crispa_chicken.jpg";
+import iberito from "@/assets/platillos/iberito.jpg";
+import kebab from "@/assets/platillos/kebab.jpg";
+import platoTonterias from "@/assets/platillos/plato_tonterias.jpg";
+import queso from "@/assets/platillos/queso.jpeg";
+import tapasCaseras from "@/assets/platillos/tapas_caceras.jpeg";
+import burgerAmericana from "@/assets/platillos/burger_americana.jpg";
+import camperoBells from "@/assets/platillos/campero_bells.jpg";
+import cremoso from "@/assets/platillos/cremoso.jpg";
+import dobleChease from "@/assets/platillos/doble_chease.jpg";
+import kapsuleCorp from "@/assets/platillos/kapsule_corp.jpeg";
+import mechada from "@/assets/platillos/mechada.jpg";
+import pulgaTortillaPatatas from "@/assets/platillos/pulga_de_tortilla_de_patatas.jpg";
+import serranito from "@/assets/platillos/serranito.jpg";
+import tropezon from "@/assets/platillos/tropezon.jpeg";
+
 export const menuCategories: MenuCategory[] = [
   {
     id: "cervezas-barril",
@@ -182,21 +202,21 @@ export const menuCategories: MenuCategory[] = [
         name: "Anchoa de Santoña 0'0",
         price: "1,6€",
         category: "platotonterias",
-        image: tapa1,
+        image: anchoa,
       },
       {
         id: "cerdo-jamon",
         name: "Cerdo, jamón serrano, pimiento rojo y alioli",
         price: "1,8€",
         category: "platotonterias",
-        image: tapa2,
+        image: platoTonterias,
       },
       {
         id: "cerdo-queso",
         name: "Cerdo, queso curado, lechuga y alioli",
         price: "1,8€",
         category: "platotonterias",
-        image: tapa3,
+        image: queso,
       },
       {
         id: "tropezon",
@@ -204,7 +224,7 @@ export const menuCategories: MenuCategory[] = [
         description: "cerdo, tomate y huevo de codorniz",
         price: "1,8€",
         category: "platotonterias",
-        image: tapa4,
+        image: tropezon,
       },
     ],
     isOpen: true,
@@ -218,7 +238,7 @@ export const menuCategories: MenuCategory[] = [
         name: "Queso Curado",
         price: "1,5€",
         category: "tapas",
-        image: tapa5,
+        image: queso,
       },
       {
         id: "salchichon",
@@ -232,7 +252,7 @@ export const menuCategories: MenuCategory[] = [
         name: "Tapas Caseras en Vitrina",
         price: "1,4€",
         category: "tapas",
-        image: tapa7,
+        image: tapasCaseras,
       },
       {
         id: "medias",
@@ -293,7 +313,7 @@ export const menuCategories: MenuCategory[] = [
         description: "Con bacon, queso, cebolla a la plancha y alioli",
         price: "1,70€",
         category: "mini-burgers",
-        image: tapa14,
+        image: burgerDeCerdo,
       },
       {
         id: "burger-americana",
@@ -301,7 +321,7 @@ export const menuCategories: MenuCategory[] = [
         description: "Queso cheddar, salsa americana y pepinillo",
         price: "1,9€",
         category: "mini-burgers",
-        image: tapa15,
+        image: burgerAmericana,
       },
       {
         id: "doble-cheese",
@@ -310,7 +330,7 @@ export const menuCategories: MenuCategory[] = [
           "Doble carne de ternera, queso cheddar, queso edam y kétchup",
         price: "2,6€",
         category: "mini-burgers",
-        image: tapa16,
+        image: dobleChease,
       },
       {
         id: "crispy-chicken",
@@ -318,7 +338,7 @@ export const menuCategories: MenuCategory[] = [
         description: "Pollo, tomate y alioli",
         price: "1,5€",
         category: "mini-burgers",
-        image: tapa17,
+        image: crispaChicken,
       },
       {
         id: "burger-mojo",
@@ -349,7 +369,7 @@ export const menuCategories: MenuCategory[] = [
         price: "1,5€",
         description: "Tomate y alioli",
         category: "mini-camperos",
-        image: bodillo1,
+        image: camperoPolloAsado,
       },
       {
         id: "mixto",
@@ -366,7 +386,7 @@ export const menuCategories: MenuCategory[] = [
         description:
           "Pollo asado, carne mechada, queso, tomate, lechuga y alioli",
         category: "mini-camperos",
-        image: bodillo3,
+        image: camperoBells,
       },
       {
         id: "plumi",
@@ -396,7 +416,7 @@ export const menuCategories: MenuCategory[] = [
         price: "1,5€",
         description: "Con alioli",
         category: "pulguitas",
-        image: bodillo2,
+        image: pulgaTortillaPatatas,
       },
       {
         id: "carnemechada",
@@ -404,7 +424,7 @@ export const menuCategories: MenuCategory[] = [
         price: "1,5€",
         description: "Con alioli",
         category: "pulguitas",
-        image: bodillo3,
+        image: mechada,
       },
       {
         id: "serranito",
@@ -412,7 +432,7 @@ export const menuCategories: MenuCategory[] = [
         price: "1,8€",
         description: "Filete de cerdo, jamón serrano, pimiento rojo y alioli",
         category: "pulguitas",
-        image: bodillo4,
+        image: serranito,
       },
       {
         id: "baconqueso",
@@ -435,7 +455,7 @@ export const menuCategories: MenuCategory[] = [
         price: "1,9€",
         description: "Kebab de pollo, lechuga, cebolla plancha y salsa kebab",
         category: "rollitos",
-        image: bodillo10,
+        image: kebab,
       },
       {
         id: "fajita",
@@ -485,7 +505,7 @@ export const menuCategories: MenuCategory[] = [
         price: "2,1€",
         description: "Pulga de crema de jamón ibérico y carne mechada",
         category: "tapas-gourmet",
-        image: bodillo17,
+        image: iberito,
       },
       {
         id: "cremoso",
@@ -493,7 +513,7 @@ export const menuCategories: MenuCategory[] = [
         price: "1,7€",
         description: "Pulga con cerdo, crema de queso y cebolla caramelizada",
         category: "tapas-gourmet",
-        image: bodillo15,
+        image: cremoso,
       },
       {
         id: "flori",
@@ -512,7 +532,7 @@ export const menuCategories: MenuCategory[] = [
         description:
           "Pan brioche, pulled pork casero con cebolla morada y alioli",
         category: "tapas-gourmet",
-        image: bodillo17,
+        image: kapsuleCorp,
       },
       {
         id: "cristabells",

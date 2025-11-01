@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import pubBells from "@/assets/pub_bells.webp";
+import pubBells from "@/assets/pub_bells.jpeg";
 
 const Navbar = ({ setIsMobileMenuOpen }) => {
   const navigate = useNavigate();
@@ -55,6 +55,13 @@ const Navbar = ({ setIsMobileMenuOpen }) => {
     </>
   );
 };
+const navigations = [
+  { name: "Inicio", sectionId: "inicio" },
+  { name: "Quiénes Somos", sectionId: "nosotros" },
+  { name: "Platos", sectionId: "platos" },
+  { name: "Contacto", sectionId: "contacto" },
+  { name: "Reseñas", sectionId: "resenas" },
+];
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -118,69 +125,29 @@ const Navigation = () => {
           <div className="hidden md:flex items-center gap-8">
             {isHomePage ? (
               <>
-                <button
-                  onClick={() => scrollToSection("inicio")}
-                  className="text-foreground hover:text-primary transition-colors font-medium"
-                >
-                  Inicio
-                </button>
-                <button
-                  onClick={() => scrollToSection("nosotros")}
-                  className="text-foreground hover:text-primary transition-colors font-medium"
-                >
-                  Quiénes Somos
-                </button>
-                <button
-                  onClick={() => scrollToSection("platos")}
-                  className="text-foreground hover:text-primary transition-colors font-medium"
-                >
-                  Platos
-                </button>
-                <button
-                  onClick={() => scrollToSection("contacto")}
-                  className="text-foreground hover:text-primary transition-colors font-medium"
-                >
-                  Contacto
-                </button>
-                <button
-                  onClick={() => scrollToSection("reseñas")}
-                  className="text-foreground hover:text-primary transition-colors font-medium"
-                >
-                  Reseñas
-                </button>
+                {navigations.map((nav) => (
+                  <button
+                    key={nav.sectionId}
+                    onClick={() => scrollToSection(nav.sectionId)}
+                    className="text-foreground hover:text-primary transition-colors font-medium"
+                  >
+                    {nav.name}
+                  </button>
+                ))}
               </>
             ) : (
               <>
-                <button
-                  onClick={() => handleNavClick("inicio")}
-                  className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
-                >
-                  Inicio
-                </button>
-                <button
-                  onClick={() => handleNavClick("nosotros")}
-                  className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
-                >
-                  Quiénes Somos
-                </button>
-                <button
-                  onClick={() => handleNavClick("platos")}
-                  className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
-                >
-                  Platos
-                </button>
-                <button
-                  onClick={() => handleNavClick("contacto")}
-                  className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
-                >
-                  Contacto
-                </button>
-                <button
-                  onClick={() => handleNavClick("reseñas")}
-                  className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
-                >
-                  Reseñas
-                </button>
+                {navigations.map((nav) => (
+                  <Link to={`/#${nav.sectionId}`} key={nav.sectionId}>
+                    <button
+                      key={nav.sectionId}
+                      onClick={() => scrollToSection(nav.sectionId)}
+                      className="text-foreground hover:text-primary transition-colors font-medium"
+                    >
+                      {nav.name}
+                    </button>
+                  </Link>
+                ))}
               </>
             )}
             <Link to="/carta">
@@ -248,9 +215,9 @@ const Navigation = () => {
                     Contacto
                   </button>
                 </Link>
-                <Link to="/#reseñas" onClick={() => setIsMobileMenuOpen(false)}>
+                <Link to="/#resenas" onClick={() => setIsMobileMenuOpen(false)}>
                   <button
-                    onClick={() => scrollToSection("reseñas")}
+                    onClick={() => scrollToSection("resenas")}
                     className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
                   >
                     Reseñas

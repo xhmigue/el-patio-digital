@@ -16,65 +16,65 @@ const reviewsData: Review[] = [
     name: "Francisco Javier",
     date: "Hace un mes",
     text: "Buenas me hacen una tortilla a la francesa y al lado una rodajas de tomate y un café súper bueno más que bueno para mi un 10 se queda corto.",
-    googleLink: "https://share.google/eVyJWJyONsIQGbkBY"
+    googleLink: "https://share.google/eVyJWJyONsIQGbkBY",
   },
   {
     name: "Noemí",
     date: "Hace una semana",
     text: `Todo está buenísimo, son rápidos en atender y los Camareros son muy amables.
 Ay muy buen ambiente, y tienen terraza. En el mismo bar se puede echar la primitiva ,es administración.`,
-    googleLink: "https://share.google/vz1bXXKobMBrHp0Ra"
+    googleLink: "https://share.google/vz1bXXKobMBrHp0Ra",
   },
   {
     name: "Pepe",
     date: "Hace un año",
     text: `No es solo un bar, es un lugar
 Que a las personas de fuera del pueblo nos facilita recoger los pedidos online, además del servicio que como administración y bar hace, y lo hace bien, yo suelo tomar algo o meter algo a la loteria cosa q no suelo hacer, pero creo q ayudo a que siga dando ese servicio, gracias.`,
-    googleLink: "https://share.google/1TS0zziKVettwn7KF"
+    googleLink: "https://share.google/1TS0zziKVettwn7KF",
   },
   {
     name: "Andrea",
     date: "Hace un año",
     text: `Voy muy a menudo y seguiría sin dudarlo, a todas las horas es maravilloso: desayuno, cena, tardeo…`,
-    googleLink: "https://share.google/s907X644IUR2QbTwe"
+    googleLink: "https://share.google/s907X644IUR2QbTwe",
   },
   {
     name: "Lorena",
     date: "Hace 2 años",
     text: `Desayunos buenísimos y si vas de noche tienen unas tapas exquisitas,camarer@s muy simpaticos 100% recomendable`,
-    googleLink: "https://share.google/eWvYNGLrOYLTLn6QN"
+    googleLink: "https://share.google/eWvYNGLrOYLTLn6QN",
   },
   {
     name: "Lope",
     date: "Hace 1 año",
     text: `Hace tiempo que no voy pero en Cartama el mejor sitio para tomar algo.`,
-    googleLink: "https://share.google/FksGtSIsmxPBXvqwZ"
+    googleLink: "https://share.google/FksGtSIsmxPBXvqwZ",
   },
   {
     name: "José",
     date: "Hace 2 años",
     text: "Un bar familiar en centro del pueblo con buena atencion y variedad de servicios( loterias y apuestas, retirada paquetes,...)",
-    googleLink: "https://share.google/KBnCJfyuEDNte9hLb"
+    googleLink: "https://share.google/KBnCJfyuEDNte9hLb",
   },
   {
     name: "Cintia B.",
     date: "Hace 3 años",
     text: "Variedad de tapas a muy buenos precios. Buen servicio. Aunque no me hayan regalado la camiseta del pub, le doy 5 estrellas",
-    googleLink: "https://share.google/vuDhsktfhbUrEC7Ri"
+    googleLink: "https://share.google/vuDhsktfhbUrEC7Ri",
   },
   {
     name: "Joaquin",
     date: "Hace 5 años",
     text: "Gran lugar para ver los partidos de fútbol, en especial los de F.C. Barcelona.",
-    googleLink: "https://share.google/RmWCUsrjvAWc8TbNs"
-  }
+    googleLink: "https://share.google/RmWCUsrjvAWc8TbNs",
+  },
 ];
 
 const ReviewSliderGooglePubBells = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ 
+  const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,
     align: "start",
-    slidesToScroll: 1
+    slidesToScroll: 1,
   });
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
@@ -118,7 +118,7 @@ const ReviewSliderGooglePubBells = () => {
   }, [emblaApi, isPaused]);
 
   return (
-    <section id="reseñas" className="py-16 md:py-24 bg-secondary/30">
+    <section id="resenas" className="py-16 md:py-24 bg-secondary/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -129,7 +129,7 @@ const ReviewSliderGooglePubBells = () => {
           </p>
         </div>
 
-        <div 
+        <div
           className="relative"
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
@@ -160,8 +160,12 @@ const ReviewSliderGooglePubBells = () => {
 
                       {/* Reviewer Info */}
                       <div className="mb-4">
-                        <p className="font-semibold text-foreground">{review.name}</p>
-                        <p className="text-sm text-muted-foreground">{review.date}</p>
+                        <p className="font-semibold text-foreground">
+                          {review.name}
+                        </p>
+                        <p className="text-sm text-muted-foreground">
+                          {review.date}
+                        </p>
                       </div>
 
                       {/* Google Link */}
