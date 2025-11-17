@@ -160,13 +160,48 @@ const Navigation = () => {
                 </Link>
               </>
             ) : (
-              <Link
-                to="/"
-                className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Volver al inicio
-              </Link>
+              <>
+                <Link to="/#inicio" onClick={() => setIsMobileMenuOpen(false)}>
+                  <button
+                    onClick={() => scrollToSection("inicio")}
+                    className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
+                  >
+                    Inicio
+                  </button>
+                </Link>
+
+                <Link
+                  to="/#nosotros"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  <button
+                    onClick={() => scrollToSection("nosotros")}
+                    className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
+                  >
+                    Quiénes Somos
+                  </button>
+                </Link>
+
+                <Link
+                  to="/#contacto"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  <button
+                    onClick={() => scrollToSection("contacto")}
+                    className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
+                  >
+                    Contacto
+                  </button>
+                </Link>
+                <Link to="/#resenas" onClick={() => setIsMobileMenuOpen(false)}>
+                  <button
+                    onClick={() => scrollToSection("resenas")}
+                    className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
+                  >
+                    Reseñas
+                  </button>
+                </Link>
+              </>
             )}
             <Link to="/carta" onClick={() => setIsMobileMenuOpen(false)}>
               <Button

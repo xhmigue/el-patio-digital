@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 
 const AvisoLegal = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background mt-8">
       <Navigation />
       <div className="container mx-auto px-6 py-20 max-w-4xl">
         <h1 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-8">
