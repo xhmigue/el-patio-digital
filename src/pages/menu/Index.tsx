@@ -36,7 +36,7 @@ const Index = () => {
                   <MenuCard
                     key={item.id}
                     item={item}
-                    onClick={category.isOpen ? () => handleItemClick(item) : ()=>{}}
+                    onClick={item.isVisible == false ? ()=>{} : (category.isOpen ? () => handleItemClick(item) : ()=>{})}
                   />
                 ))}
               </div>

@@ -71,7 +71,7 @@ const AboutSection = () => {
                       </p>
                     </div>
                   </div>
-                  <p className="text-sm md:text-base text-foreground/80 mt-4 font-medium tracking-wide">
+                  <p className="text-lg text-foreground font-semibold leading-relaxed">
                     Años de historia
                   </p>
                 </div>
@@ -87,7 +87,7 @@ const AboutSection = () => {
                          }} 
                     />
                     <div className="relative flex flex-col items-center space-y-2">
-                      <p className="text-sm md:text-base text-muted-foreground font-serif italic">
+                      <p className="text-lg text-foreground font-semibold leading-relaxed">
                         Desde
                       </p>
                       <p className="text-5xl md:text-6xl font-bold text-primary font-serif tracking-wider"
@@ -121,7 +121,7 @@ const AboutSection = () => {
                       <circle cx="110" cy="118" r="3" className="fill-primary/40 group-hover:fill-primary/60 transition-all" />
                     </svg>
                   </div>
-                  <p className="text-sm md:text-base text-foreground/80 mt-2 font-medium tracking-wide text-center">
+                  <p className="text-lg text-foreground font-semibold leading-relaxed">
                     <span className="text-2xl md:text-3xl font-bold text-primary block mb-1">100%</span>
                     Alma familiar
                   </p>
