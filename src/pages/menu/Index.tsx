@@ -3,7 +3,6 @@ import { MenuItem } from "@/types/menu";
 import { menuCategories } from "@/data/menuData";
 import { MenuCard } from "@/components/MenuCard";
 import { MenuModal } from "@/components/MenuModal";
-import { Beer } from "lucide-react";
 import Footer from "@/components/Footer";
 import Navigation from "@/components/Navigation";
 

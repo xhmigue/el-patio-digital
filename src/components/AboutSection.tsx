@@ -7,20 +7,6 @@ const AboutSection = () => {
       {/* Dark background with particle pattern */}
       <div 
         className="absolute inset-0 bg-[#0a0809]"
-        style={{
-          backgroundImage: `
-            radial-gradient(circle at 20% 50%, hsl(355 83% 52% / 0.1) 0%, transparent 50%),
-            radial-gradient(circle at 80% 20%, hsl(355 83% 52% / 0.08) 0%, transparent 50%),
-            radial-gradient(circle at 40% 80%, hsl(355 83% 52% / 0.06) 0%, transparent 50%),
-            radial-gradient(1px 1px at 20px 30px, hsl(0 0% 100% / 0.1) 1px, transparent 1px),
-            radial-gradient(1px 1px at 60px 70px, hsl(0 0% 100% / 0.08) 1px, transparent 1px),
-            radial-gradient(1px 1px at 50px 50px, hsl(0 0% 100% / 0.06) 1px, transparent 1px),
-            radial-gradient(1px 1px at 130px 80px, hsl(0 0% 100% / 0.05) 1px, transparent 1px),
-            radial-gradient(1px 1px at 90px 10px, hsl(0 0% 100% / 0.04) 1px, transparent 1px)
-          `,
-          backgroundSize: '200px 200px, 180px 180px, 220px 220px, 150px 150px, 180px 180px, 200px 200px, 250px 250px, 170px 170px',
-          backgroundPosition: '0 0, 40px 60px, 130px 270px, 70px 100px, 150px 200px, 200px 50px, 50px 150px, 120px 30px'
-        }}
       />
       
       <div className="container mx-auto px-6 relative z-10">
@@ -100,7 +86,7 @@ const AboutSection = () => {
                   {/* Number with neon glow */}
                   <div className="relative mb-3">
                     <h3 
-                      className="text-7xl font-bold font-sans text-primary relative z-10"
+                      className="text-5xl font-bold font-sans text-primary relative z-10"
                       style={{ 
                         textShadow: '0 0 30px hsl(355 83% 52% / 0.8), 0 0 60px hsl(355 83% 52% / 0.4), 0 4px 6px rgba(0,0,0,0.3)',
                         letterSpacing: '-0.02em'
@@ -111,7 +97,7 @@ const AboutSection = () => {
                   </div>
 
                   {/* Description */}
-                  <p className="text-base text-muted-foreground font-medium tracking-wide">
+                  <p className="text-foreground font-semibold">
                     Años de historia
                   </p>
                 </div>
@@ -141,7 +127,7 @@ const AboutSection = () => {
                   {/* Number with neon glow */}
                   <div className="relative mb-3">
                     <h3 
-                      className="text-7xl font-bold font-sans text-primary relative z-10"
+                      className="text-5xl font-bold font-sans text-primary relative z-10"
                       style={{ 
                         textShadow: '0 0 30px hsl(355 83% 52% / 0.8), 0 0 60px hsl(355 83% 52% / 0.4), 0 4px 6px rgba(0,0,0,0.3)',
                         letterSpacing: '-0.02em'
@@ -152,7 +138,7 @@ const AboutSection = () => {
                   </div>
 
                   {/* Description */}
-                  <p className="text-base text-muted-foreground font-medium tracking-wide">
+                  <p className="text-foreground font-semibold">
                     Desde 1979
                   </p>
                 </div>
@@ -182,7 +168,7 @@ const AboutSection = () => {
                   {/* Number with neon glow */}
                   <div className="relative mb-3">
                     <h3 
-                      className="text-7xl font-bold font-sans text-primary relative z-10"
+                      className="text-5xl font-bold font-sans text-primary relative z-10"
                       style={{ 
                         textShadow: '0 0 30px hsl(355 83% 52% / 0.8), 0 0 60px hsl(355 83% 52% / 0.4), 0 4px 6px rgba(0,0,0,0.3)',
                         letterSpacing: '-0.02em'
@@ -193,7 +179,7 @@ const AboutSection = () => {
                   </div>
 
                   {/* Description */}
-                  <p className="text-base text-muted-foreground font-medium tracking-wide">
+                  <p className="text-foreground font-semibold">
                     Alma familiar
                   </p>
                 </div>
