@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import restaurantInterior from "@/assets/restaurant-interior.jpg";
+import restaurantInterior from "@/assets/legado.jpeg";
 
 const AboutSection = () => {
   return (

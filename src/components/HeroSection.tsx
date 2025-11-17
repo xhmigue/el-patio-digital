@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom"; // <-- si usas React Router
-import hero1 from "@/assets/hero-1.jpg";
-import hero2 from "@/assets/hero-2.jpg";
-import hero3 from "@/assets/hero-3.jpg";
+import hero1 from "@/assets/slider0.webp";
+import hero2 from "@/assets/slider01.webp";
+import hero3 from "@/assets/slider3.webp";
 
 const slides = [
   {
@@ -59,7 +59,7 @@ const HeroSection = () => {
       {slides.map((slide, index) => (
         <div
           key={index}
-          className={`absolute inset-0 transition-opacity duration-1000 ${
+          className={`absolute inset-0 transition-opacity duration-1000  ${
             index === currentSlide ? "opacity-100" : "opacity-0"
           }`}
         >

@@ -6,6 +6,7 @@ export interface MenuItem {
   image?: string;
   category: string;
   subtitle?:string;
+  isVisible?:boolean;
 }
 
 export interface MenuCategory {

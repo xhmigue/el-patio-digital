@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Introduzca sus datos de acceso"
+AuthUserFile /home/www/public/.htpasswd
+require user alvaro

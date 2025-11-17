@@ -78,11 +78,23 @@ const MenuSection = () => {
     <section id="menu" className="py-20 bg-card">
       <div className="container mx-auto px-6">
         <div className="text-center mb-10">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4">
-            Nuestra Carta
+          <h2 className="text-4xl md:text-5xl font-serif font-bold mb-4">
+            La Carta de <span className="text-primary">PUB BELL'S</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-10">
-            Una experiencia culinaria diseñada para deleitar todos tus sentidos
+          <p className="text-xl text-muted-foreground  mx-auto mb-10">
+            Más de Cuatro Décadas de Sabor y Tradición Desde 1979, PUB BELL'S ha
+            sido un referente en calidad y buen ambiente.
+          </p>
+          <p className="text-xl text-muted-foreground mx-auto mb-10">
+            Te invitamos a explorar una carta que celebra la esencia del
+            auténtico tapeo, con clásicos inmortales y emocionantes novedades
+            NEW!.
+          </p>
+          <p className="text-xl text-muted-foreground mx-auto mb-10">
+            Desde la inconfundible frescura de una Caña con barril El Águila
+            Dorada hasta nuestras innovadoras Tapas Gourmet y los bocados más
+            auténticos, cada plato y bebida está pensado para hacer de tu visita
+            una experiencia memorable. ¡Prepara tu pinta y tu paladar!
           </p>
           <Link to="/carta">
             <Button

@@ -1,64 +1,45 @@
 import { MenuCategory } from "@/types/menu";
 
 // Import images
-import bodillo1 from "@/assets/bodillos/1.jpg";
-import bodillo2 from "@/assets/bodillos/2.jpg";
-import bodillo3 from "@/assets/bodillos/3.jpg";
-import bodillo4 from "@/assets/bodillos/4.jpg";
-import bodillo5 from "@/assets/bodillos/5.jpg";
-import bodillo6 from "@/assets/bodillos/6.jpg";
-import bodillo7 from "@/assets/bodillos/7.jpg";
-import bodillo8 from "@/assets/bodillos/8.jpg";
-import bodillo9 from "@/assets/bodillos/9.jpg";
-import bodillo10 from "@/assets/bodillos/10.jpg";
-import bodillo11 from "@/assets/bodillos/11.jpg";
-import bodillo12 from "@/assets/bodillos/12.jpg";
-import bodillo13 from "@/assets/bodillos/13.jpg";
-import bodillo14 from "@/assets/bodillos/14.jpg";
-import bodillo15 from "@/assets/bodillos/15.jpg";
-import bodillo16 from "@/assets/bodillos/16.jpg";
-import bodillo17 from "@/assets/bodillos/17.jpg";
+import bodillo2 from "@/assets/bodillos/2.webp";
+import bodillo4 from "@/assets/bodillos/4.webp";
+import bodillo5 from "@/assets/bodillos/5.webp";
+import bodillo11 from "@/assets/bodillos/11.webp";
+import bodillo12 from "@/assets/bodillos/12.webp";
+import bodillo13 from "@/assets/bodillos/13.webp";
+import bodillo14 from "@/assets/bodillos/14.webp";
+import bodillo16 from "@/assets/bodillos/16.webp";
+import bodillo17 from "@/assets/bodillos/17.webp";
 
-import tapa1 from "@/assets/tapas/1.jpg";
-import tapa2 from "@/assets/tapas/2.jpg";
-import tapa3 from "@/assets/tapas/3.jpg";
-import tapa4 from "@/assets/tapas/4.jpg";
-import tapa5 from "@/assets/tapas/5.jpg";
-import tapa6 from "@/assets/tapas/6.jpg";
-import tapa7 from "@/assets/tapas/7.jpg";
-import tapa8 from "@/assets/tapas/8.jpg";
-import tapa9 from "@/assets/tapas/9.jpg";
-import tapa10 from "@/assets/tapas/10.jpg";
-import tapa11 from "@/assets/tapas/11.jpg";
-import tapa12 from "@/assets/tapas/12.jpg";
-import tapa13 from "@/assets/tapas/13.jpg";
-import tapa14 from "@/assets/tapas/14.jpg";
-import tapa15 from "@/assets/tapas/15.jpg";
-import tapa16 from "@/assets/tapas/16.jpg";
-import tapa17 from "@/assets/tapas/17.jpg";
-import tapa18 from "@/assets/tapas/18.jpg";
-import tapa19 from "@/assets/tapas/19.jpg";
-import tapa20 from "@/assets/tapas/20.jpg";
+import tapa6 from "@/assets/tapas/6.webp";
+import tapa8 from "@/assets/tapas/8.webp";
+import tapa9 from "@/assets/tapas/9.webp";
+import tapa10 from "@/assets/tapas/10.webp";
+import tapa11 from "@/assets/tapas/11.webp";
+import tapa12 from "@/assets/tapas/12.webp";
+import tapa13 from "@/assets/tapas/13.webp";
+import tapa18 from "@/assets/tapas/18.webp";
+import tapa19 from "@/assets/tapas/19.webp";
 
 // Import images (Platillos)
-import anchoa from "@/assets/platillos/anchoa.jpg";
-import burgerDeCerdo from "@/assets/platillos/burger_de_cerdo.jpg";
-import camperoPolloAsado from "@/assets/platillos/campero_pollo_asado.jpg";
-import crispaChicken from "@/assets/platillos/crispa_chicken.jpg";
-import iberito from "@/assets/platillos/iberito.jpg";
-import kebab from "@/assets/platillos/kebab.jpg";
-import platoTonterias from "@/assets/platillos/plato_tonterias.jpg";
-import queso from "@/assets/platillos/queso.jpeg";
-import tapasCaseras from "@/assets/platillos/tapas_caceras.jpeg";
-import burgerAmericana from "@/assets/platillos/burger_americana.jpg";
-import camperoBells from "@/assets/platillos/campero_bells.jpg";
-import cremoso from "@/assets/platillos/cremoso.jpg";
-import dobleChease from "@/assets/platillos/doble_chease.jpg";
-import kapsuleCorp from "@/assets/platillos/kapsule_corp.jpeg";
-import mechada from "@/assets/platillos/mechada.jpg";
-import pulgaTortillaPatatas from "@/assets/platillos/pulga_de_tortilla_de_patatas.jpg";
-import serranito from "@/assets/platillos/serranito.jpg";
-import tropezon from "@/assets/platillos/tropezon.jpeg";
+import anchoa from "@/assets/platillos/anchoa.webp";
+import burgerDeCerdo from "@/assets/platillos/burger_de_cerdo.webp";
+import camperoPolloAsado from "@/assets/platillos/campero_pollo_asado.webp";
+import crispaChicken from "@/assets/platillos/crispa_chicken.webp";
+import iberito from "@/assets/platillos/iberito.webp";
+import kebab from "@/assets/platillos/kebab.webp";
+import platoTonterias from "@/assets/platillos/plato_tonterias.webp";
+import queso from "@/assets/platillos/queso.webp";
+import tapasCaseras from "@/assets/platillos/tapas_caceras.webp";
+import burgerAmericana from "@/assets/platillos/burger_americana.webp";
+import camperoBells from "@/assets/platillos/campero_bells.webp";
+import cremoso from "@/assets/platillos/cremoso.webp";
+import dobleChease from "@/assets/platillos/doble_chease.webp";
+import kapsuleCorp from "@/assets/platillos/kapsule_corp.webp";
+import mechada from "@/assets/platillos/mechada.webp";
+import pulgaTortillaPatatas from "@/assets/platillos/pulga_de_tortilla_de_patatas.webp";
+import serranito from "@/assets/platillos/serranito.webp";
+import tropezon from "@/assets/platillos/tropezon.webp";
 
 export const menuCategories: MenuCategory[] = [
   {
@@ -216,7 +197,7 @@ export const menuCategories: MenuCategory[] = [
         name: "Cerdo, queso curado, lechuga y alioli",
         price: "1,8€",
         category: "platotonterias",
-        image: queso,
+        image: bodillo11,
       },
       {
         id: "tropezon",
@@ -246,6 +227,7 @@ export const menuCategories: MenuCategory[] = [
         price: "1,5€",
         category: "tapas",
         image: tapa6,
+        isVisible: false
       },
       {
         id: "tapas-caseras",
@@ -253,6 +235,7 @@ export const menuCategories: MenuCategory[] = [
         price: "1,4€",
         category: "tapas",
         image: tapasCaseras,
+        isVisible: false
       },
       {
         id: "medias",
@@ -260,6 +243,7 @@ export const menuCategories: MenuCategory[] = [
         price: "5,8€",
         category: "tapas",
         image: tapa8,
+        isVisible: false
       },
       {
         id: "medias-especiales",
@@ -267,6 +251,7 @@ export const menuCategories: MenuCategory[] = [
         price: "6,5€",
         category: "tapas",
         image: tapa9,
+        isVisible: false
       },
       {
         id: "gildas-anchoa",
@@ -275,6 +260,7 @@ export const menuCategories: MenuCategory[] = [
         price: "1,5€",
         category: "tapas",
         image: tapa10,
+        isVisible: false
       },
       {
         id: "gildas-cecina",
@@ -283,6 +269,7 @@ export const menuCategories: MenuCategory[] = [
         price: "1,5€",
         category: "tapas",
         image: tapa11,
+        isVisible: false
       },
       {
         id: "pinchos-morunos",
@@ -291,6 +278,7 @@ export const menuCategories: MenuCategory[] = [
         price: "1,8€",
         category: "tapas",
         image: tapa12,
+        isVisible: false
       },
       {
         id: "pincho-gambon",
@@ -299,6 +287,7 @@ export const menuCategories: MenuCategory[] = [
         price: "2,2€",
         category: "tapas",
         image: tapa13,
+        isVisible: false
       },
     ],
     isOpen: true,
@@ -347,6 +336,7 @@ export const menuCategories: MenuCategory[] = [
         price: "1,9€",
         category: "mini-burgers",
         image: tapa18,
+        isVisible: false
       },
       {
         id: "perrito",
@@ -355,6 +345,7 @@ export const menuCategories: MenuCategory[] = [
         price: "1,3€",
         category: "mini-burgers",
         image: tapa19,
+        isVisible: false
       },
     ],
     isOpen: true,
@@ -378,6 +369,7 @@ export const menuCategories: MenuCategory[] = [
         description: "York, queso y mantequilla",
         category: "mini-camperos",
         image: bodillo2,
+        isVisible: false
       },
       {
         id: "bells",
@@ -395,6 +387,7 @@ export const menuCategories: MenuCategory[] = [
         description: "Tortilla de patata, carne mechada y alioli",
         category: "mini-camperos",
         image: bodillo4,
+        isVisible: false
       },
     ],
     isOpen: true,
@@ -409,6 +402,7 @@ export const menuCategories: MenuCategory[] = [
         price: "1,5€",
         category: "pulguitas",
         image: bodillo5,
+        isVisible: false
       },
       {
         id: "toritillapatatas",
@@ -441,6 +435,7 @@ export const menuCategories: MenuCategory[] = [
         description: "Alioli",
         category: "pulguitas",
         image: bodillo4,
+        isVisible: false
       },
     ],
     isOpen: true,
@@ -465,6 +460,7 @@ export const menuCategories: MenuCategory[] = [
         description: "Con pollo, salteado de pimientos, un toque de pique",
         category: "rollitos",
         image: bodillo11,
+        isVisible: false
       },
       {
         id: "burrito",
@@ -474,6 +470,7 @@ export const menuCategories: MenuCategory[] = [
         description: "Pulled pork con cheddar y guacamole",
         category: "rollitos",
         image: bodillo12,
+        isVisible: false
       },
     ],
     isOpen: true,
@@ -490,6 +487,7 @@ export const menuCategories: MenuCategory[] = [
           "43g de carne black angus en pan brioche, crema de queso curado y confitura de tomate",
         category: "tapas-gourmet",
         image: bodillo13,
+        isVisible: false
       },
       {
         id: "mini-black-angus",
@@ -498,6 +496,7 @@ export const menuCategories: MenuCategory[] = [
         description: "43g de carne black angus, queso cheddar y tomate",
         category: "tapas-gourmet",
         image: bodillo14,
+        isVisible: false
       },
       {
         id: "iberito",
@@ -523,6 +522,7 @@ export const menuCategories: MenuCategory[] = [
           "Pulga de filete de cerdo, queso curado, huevo de codorniz, lechuga y alioli",
         category: "tapas-gourmet",
         image: bodillo16,
+        isVisible: false
       },
       {
         id: "kapsule",
@@ -543,6 +543,7 @@ export const menuCategories: MenuCategory[] = [
           "Pan cristal, solomillo al whisky, mayo trufada con un toque de lima",
         category: "tapas-gourmet",
         image: bodillo17,
+        isVisible: false
       },
     ],
     isOpen: true,

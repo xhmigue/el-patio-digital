@@ -1,7 +1,7 @@
-import tapa1 from "@/assets/tapas/27.jpg";
-import bodillo3 from "@/assets/bodillos/3.jpg";
-import tapa15 from "@/assets/tapas/15.jpg";
-import bodillo17 from "@/assets/bodillos/17.jpg";
+import tapa1 from "@/assets/tapas/27.webp";
+import bodillo3 from "@/assets/bodillos/3.webp";
+import tapa15 from "@/assets/tapas/15.webp";
+import bodillo17 from "@/assets/bodillos/17.webp";
 
 const dishes = [
   {
@@ -26,7 +26,8 @@ const dishes = [
   {
     image: tapa15,
     title: "Americana",
-    description: "Burger americana de ternera con queso cheddar, salsa americana y pepinillo.",
+    description:
+      "Burger americana de ternera con queso cheddar, salsa americana y pepinillo.",
   },
 ];
 
@@ -39,8 +40,8 @@ const DishesGallery = () => {
             Nuestros Platos Destacados
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Cada creación es una obra de arte culinaria, elaborada con ingredientes de la más alta
-            calidad
+            Sumérgete en el sabor que nos define desde 1979. Cada creación en
+            nuestra carta es una fusión de tradición y pasión culinaria.
           </p>
         </div>
 
@@ -60,7 +61,9 @@ const DishesGallery = () => {
                   <h3 className="text-2xl font-serif font-bold text-foreground mb-2">
                     {dish.title}
                   </h3>
-                  <p className="text-sm text-foreground/80">{dish.description}</p>
+                  <p className="text-sm text-foreground/80">
+                    {dish.description}
+                  </p>
                 </div>
               </div>
             </div>
