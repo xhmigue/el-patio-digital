@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom"; // <-- si usas React Router
 import hero1 from "@/assets/slider0.webp";
-import hero2 from "@/assets/slider1.webp";
+import hero2 from "@/assets/slider3.webp";
 import hero3 from "@/assets/slider2.webp";
 
 const slides = [
