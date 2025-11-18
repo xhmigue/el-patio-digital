@@ -8,8 +8,8 @@ import pubBells from "@/assets/pub_bells.png";
 const navigations = [
   { name: "Inicio", sectionId: "inicio" },
   { name: "Quiénes Somos", sectionId: "nosotros" },
-  { name: "Contacto", sectionId: "contacto" },
   { name: "Reseñas", sectionId: "resenas" },
+  { name: "Contacto", sectionId: "contacto" },
 ];
 
 const Navigation = () => {
@@ -139,6 +139,14 @@ const Navigation = () => {
                   </button>
                 </Link>
 
+                <Link to="/#resenas" onClick={() => setIsMobileMenuOpen(false)}>
+                  <button
+                    onClick={() => scrollToSection("resenas")}
+                    className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
+                  >
+                    Reseñas
+                  </button>
+                </Link>
                 <Link
                   to="/#contacto"
                   onClick={() => setIsMobileMenuOpen(false)}
@@ -148,14 +156,6 @@ const Navigation = () => {
                     className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
                   >
                     Contacto
-                  </button>
-                </Link>
-                <Link to="/#resenas" onClick={() => setIsMobileMenuOpen(false)}>
-                  <button
-                    onClick={() => scrollToSection("resenas")}
-                    className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
-                  >
-                    Reseñas
                   </button>
                 </Link>
               </>
@@ -182,6 +182,14 @@ const Navigation = () => {
                   </button>
                 </Link>
 
+                <Link to="/#resenas" onClick={() => setIsMobileMenuOpen(false)}>
+                  <button
+                    onClick={() => scrollToSection("resenas")}
+                    className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
+                  >
+                    Reseñas
+                  </button>
+                </Link>
                 <Link
                   to="/#contacto"
                   onClick={() => setIsMobileMenuOpen(false)}
@@ -191,14 +199,6 @@ const Navigation = () => {
                     className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
                   >
                     Contacto
-                  </button>
-                </Link>
-                <Link to="/#resenas" onClick={() => setIsMobileMenuOpen(false)}>
-                  <button
-                    onClick={() => scrollToSection("resenas")}
-                    className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
-                  >
-                    Reseñas
                   </button>
                 </Link>
               </>
