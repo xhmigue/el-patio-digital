@@ -199,7 +199,7 @@ export const menuCategories: MenuCategory[] = [
         name: "Cerdo, queso curado, lechuga y alioli",
         price: "1,8€",
         category: "platotonterias",
-        image: bodillo11,
+        image: platoTonterias,
       },
       {
         id: "tropezon",
