@@ -40,6 +40,8 @@ import mechada from "@/assets/platillos/mechada.webp";
 import pulgaTortillaPatatas from "@/assets/platillos/pulga_de_tortilla_de_patatas.webp";
 import serranito from "@/assets/platillos/serranito.webp";
 import tropezon from "@/assets/platillos/tropezon.webp";
+import perrito from "@/assets/platillos/perrito.jpeg";
+import plumi from "@/assets/platillos/plumi.jpeg";
 
 export const menuCategories: MenuCategory[] = [
   {
@@ -227,7 +229,7 @@ export const menuCategories: MenuCategory[] = [
         price: "1,5€",
         category: "tapas",
         image: tapa6,
-        isVisible: false
+        isVisible: false,
       },
       {
         id: "tapas-caseras",
@@ -235,7 +237,7 @@ export const menuCategories: MenuCategory[] = [
         price: "1,4€",
         category: "tapas",
         image: tapasCaseras,
-        isVisible: false
+        isVisible: false,
       },
       {
         id: "medias",
@@ -243,7 +245,7 @@ export const menuCategories: MenuCategory[] = [
         price: "5,8€",
         category: "tapas",
         image: tapa8,
-        isVisible: false
+        isVisible: false,
       },
       {
         id: "medias-especiales",
@@ -251,7 +253,7 @@ export const menuCategories: MenuCategory[] = [
         price: "6,5€",
         category: "tapas",
         image: tapa9,
-        isVisible: false
+        isVisible: false,
       },
       {
         id: "gildas-anchoa",
@@ -260,7 +262,7 @@ export const menuCategories: MenuCategory[] = [
         price: "1,5€",
         category: "tapas",
         image: tapa10,
-        isVisible: false
+        isVisible: false,
       },
       {
         id: "gildas-cecina",
@@ -269,7 +271,7 @@ export const menuCategories: MenuCategory[] = [
         price: "1,5€",
         category: "tapas",
         image: tapa11,
-        isVisible: false
+        isVisible: false,
       },
       {
         id: "pinchos-morunos",
@@ -278,7 +280,7 @@ export const menuCategories: MenuCategory[] = [
         price: "1,8€",
         category: "tapas",
         image: tapa12,
-        isVisible: false
+        isVisible: false,
       },
       {
         id: "pincho-gambon",
@@ -287,7 +289,7 @@ export const menuCategories: MenuCategory[] = [
         price: "2,2€",
         category: "tapas",
         image: tapa13,
-        isVisible: false
+        isVisible: false,
       },
     ],
     isOpen: true,
@@ -336,7 +338,7 @@ export const menuCategories: MenuCategory[] = [
         price: "1,9€",
         category: "mini-burgers",
         image: tapa18,
-        isVisible: false
+        isVisible: false,
       },
       {
         id: "perrito",
@@ -344,8 +346,7 @@ export const menuCategories: MenuCategory[] = [
         description: "Cebolla crujiente y kétchup",
         price: "1,3€",
         category: "mini-burgers",
-        image: tapa19,
-        isVisible: false
+        image: perrito,
       },
     ],
     isOpen: true,
@@ -369,7 +370,7 @@ export const menuCategories: MenuCategory[] = [
         description: "York, queso y mantequilla",
         category: "mini-camperos",
         image: bodillo2,
-        isVisible: false
+        isVisible: false,
       },
       {
         id: "bells",
@@ -386,8 +387,7 @@ export const menuCategories: MenuCategory[] = [
         price: "2,3€",
         description: "Tortilla de patata, carne mechada y alioli",
         category: "mini-camperos",
-        image: bodillo4,
-        isVisible: false
+        image: plumi,
       },
     ],
     isOpen: true,
@@ -402,7 +402,7 @@ export const menuCategories: MenuCategory[] = [
         price: "1,5€",
         category: "pulguitas",
         image: bodillo5,
-        isVisible: false
+        isVisible: false,
       },
       {
         id: "toritillapatatas",
@@ -435,7 +435,7 @@ export const menuCategories: MenuCategory[] = [
         description: "Alioli",
         category: "pulguitas",
         image: bodillo4,
-        isVisible: false
+        isVisible: false,
       },
     ],
     isOpen: true,
@@ -460,7 +460,7 @@ export const menuCategories: MenuCategory[] = [
         description: "Con pollo, salteado de pimientos, un toque de pique",
         category: "rollitos",
         image: bodillo11,
-        isVisible: false
+        isVisible: false,
       },
       {
         id: "burrito",
@@ -470,7 +470,7 @@ export const menuCategories: MenuCategory[] = [
         description: "Pulled pork con cheddar y guacamole",
         category: "rollitos",
         image: bodillo12,
-        isVisible: false
+        isVisible: false,
       },
     ],
     isOpen: true,
@@ -487,7 +487,7 @@ export const menuCategories: MenuCategory[] = [
           "43g de carne black angus en pan brioche, crema de queso curado y confitura de tomate",
         category: "tapas-gourmet",
         image: bodillo13,
-        isVisible: false
+        isVisible: false,
       },
       {
         id: "mini-black-angus",
@@ -496,7 +496,7 @@ export const menuCategories: MenuCategory[] = [
         description: "43g de carne black angus, queso cheddar y tomate",
         category: "tapas-gourmet",
         image: bodillo14,
-        isVisible: false
+        isVisible: false,
       },
       {
         id: "iberito",
@@ -522,7 +522,7 @@ export const menuCategories: MenuCategory[] = [
           "Pulga de filete de cerdo, queso curado, huevo de codorniz, lechuga y alioli",
         category: "tapas-gourmet",
         image: bodillo16,
-        isVisible: false
+        isVisible: false,
       },
       {
         id: "kapsule",
@@ -543,7 +543,7 @@ export const menuCategories: MenuCategory[] = [
           "Pan cristal, solomillo al whisky, mayo trufada con un toque de lima",
         category: "tapas-gourmet",
         image: bodillo17,
-        isVisible: false
+        isVisible: false,
       },
     ],
     isOpen: true,
