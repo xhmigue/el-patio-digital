@@ -41,7 +41,7 @@ import pulgaTortillaPatatas from "@/assets/platillos/pulga_de_tortilla_de_patata
 import serranito from "@/assets/platillos/serranito.webp";
 import tropezon from "@/assets/platillos/tropezon.webp";
 import perrito from "@/assets/platillos/perrito.jpeg";
-import plumi from "@/assets/platillos/plumi.jpeg";
+import plumi from "@/assets/platillos/plumi.jpg";
 
 export const menuCategories: MenuCategory[] = [
   {
