@@ -65,6 +65,11 @@ export default {
         "neon-blue": "hsl(var(--neon-blue))",
         "electric-accent": "hsl(var(--electric-accent))",
         "timeline-glow": "hsl(var(--timeline-glow))",
+        "glass": {
+          bg: "hsl(var(--glass-bg))",
+          border: "hsl(var(--glass-border))",
+          shadow: "hsl(var(--glass-shadow))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",

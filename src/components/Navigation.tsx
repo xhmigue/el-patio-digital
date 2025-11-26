@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
 import pubBells from "@/assets/pub_bells.png";
 
 const navigations = [
@@ -32,10 +33,8 @@ const Navigation = () => {
     setIsMobileMenuOpen(false);
 
     if (window.location.pathname !== "/") {
-      // Si NO estás en "/", navega primero
       navigate(`/#${sectionId}`);
     } else {
-      // Si ya estás en "/", solo hace scroll
       const section = document.getElementById(sectionId);
       if (section) {
         section.scrollIntoView({ behavior: "smooth" });
@@ -52,169 +51,152 @@ const Navigation = () => {
   };
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-background/95 backdrop-blur-sm shadow-lg`}
+    <motion.nav
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        isScrolled
+          ? "glass-effect shadow-glass"
+          : "bg-transparent"
+      }`}
     >
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center">
+          <motion.div 
+            className="flex items-center"
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.3 }}
+          >
             <img
               src={pubBells}
-              alt="Interior del restaurante"
-              className="rounded-lg shadow-2xl w-[80px] h-[80px] object-cover"
+              alt="Pub Bell's Logo"
+              className="rounded-lg shadow-2xl w-[80px] h-[80px] object-cover ring-2 ring-primary/20"
             />
-          </div>
+          </motion.div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
             {isHomePage ? (
               <>
-                {navigations.map((nav) => (
-                  <button
+                {navigations.map((nav, index) => (
+                  <motion.button
                     key={nav.sectionId}
                     onClick={() => scrollToSection(nav.sectionId)}
-                    className="text-foreground hover:text-primary transition-colors font-medium"
+                    className="relative text-foreground font-medium group"
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.1 }}
+                    whileHover={{ scale: 1.05 }}
                   >
                     {nav.name}
-                  </button>
+                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
+                  </motion.button>
                 ))}
               </>
             ) : (
               <>
-                {navigations.map((nav) => (
+                {navigations.map((nav, index) => (
                   <Link to={`/#${nav.sectionId}`} key={nav.sectionId}>
-                    <button
-                      key={nav.sectionId}
+                    <motion.button
                       onClick={() => scrollToSection(nav.sectionId)}
-                      className="text-foreground hover:text-primary transition-colors font-medium"
+                      className="relative text-foreground font-medium group"
+                      initial={{ opacity: 0, y: -20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: index * 0.1 }}
+                      whileHover={{ scale: 1.05 }}
                     >
                       {nav.name}
-                    </button>
+                      <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
+                    </motion.button>
                   </Link>
                 ))}
               </>
             )}
             <Link to="/carta">
-              <Button
-                variant="default"
-                className="bg-primary text-primary-foreground hover:opacity-90"
-              >
-                Ver Carta
-              </Button>
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <Button
+                  variant="default"
+                  className="glass-effect bg-gradient-to-r from-primary to-primary/80 text-primary-foreground border-0 shadow-glow hover:shadow-neon transition-all duration-300"
+                >
+                  Ver Carta
+                </Button>
+              </motion.div>
             </Link>
           </div>
 
           {/* Mobile Menu Button */}
-          <button
+          <motion.button
             className="md:hidden text-foreground"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            whileTap={{ scale: 0.9 }}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          </motion.button>
         </div>
 
         {/* Mobile Menu */}
-        {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 space-y-4">
-            {isHomePage ? (
-              <>
-                <Link to="/#inicio" onClick={() => setIsMobileMenuOpen(false)}>
-                  <button
-                    onClick={() => scrollToSection("inicio")}
-                    className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
-                  >
-                    Inicio
-                  </button>
-                </Link>
-
-                <Link
-                  to="/#nosotros"
-                  onClick={() => setIsMobileMenuOpen(false)}
+        <AnimatePresence>
+          {isMobileMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3 }}
+              className="md:hidden mt-4 pb-4 space-y-4 glass-card rounded-lg p-4"
+            >
+              {isHomePage ? (
+                <>
+                  {navigations.map((nav) => (
+                    <motion.div
+                      key={nav.sectionId}
+                      whileHover={{ x: 10 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      <Link to={`/#${nav.sectionId}`} onClick={() => setIsMobileMenuOpen(false)}>
+                        <button
+                          onClick={() => scrollToSection(nav.sectionId)}
+                          className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
+                        >
+                          {nav.name}
+                        </button>
+                      </Link>
+                    </motion.div>
+                  ))}
+                </>
+              ) : (
+                <>
+                  {navigations.map((nav) => (
+                    <motion.div
+                      key={nav.sectionId}
+                      whileHover={{ x: 10 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      <Link to={`/#${nav.sectionId}`} onClick={() => setIsMobileMenuOpen(false)}>
+                        <button
+                          onClick={() => scrollToSection(nav.sectionId)}
+                          className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
+                        >
+                          {nav.name}
+                        </button>
+                      </Link>
+                    </motion.div>
+                  ))}
+                </>
+              )}
+              <Link to="/carta" onClick={() => setIsMobileMenuOpen(false)}>
+                <Button
+                  variant="default"
+                  className="w-full glass-effect bg-gradient-to-r from-primary to-primary/80 text-primary-foreground shadow-glow"
                 >
-                  <button
-                    onClick={() => scrollToSection("nosotros")}
-                    className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
-                  >
-                    Quiénes Somos
-                  </button>
-                </Link>
-
-                <Link to="/#resenas" onClick={() => setIsMobileMenuOpen(false)}>
-                  <button
-                    onClick={() => scrollToSection("resenas")}
-                    className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
-                  >
-                    Reseñas
-                  </button>
-                </Link>
-                <Link
-                  to="/#contacto"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  <button
-                    onClick={() => scrollToSection("contacto")}
-                    className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
-                  >
-                    Contacto
-                  </button>
-                </Link>
-              </>
-            ) : (
-              <>
-                <Link to="/#inicio" onClick={() => setIsMobileMenuOpen(false)}>
-                  <button
-                    onClick={() => scrollToSection("inicio")}
-                    className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
-                  >
-                    Inicio
-                  </button>
-                </Link>
-
-                <Link
-                  to="/#nosotros"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  <button
-                    onClick={() => scrollToSection("nosotros")}
-                    className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
-                  >
-                    Quiénes Somos
-                  </button>
-                </Link>
-
-                <Link to="/#resenas" onClick={() => setIsMobileMenuOpen(false)}>
-                  <button
-                    onClick={() => scrollToSection("resenas")}
-                    className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
-                  >
-                    Reseñas
-                  </button>
-                </Link>
-                <Link
-                  to="/#contacto"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  <button
-                    onClick={() => scrollToSection("contacto")}
-                    className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
-                  >
-                    Contacto
-                  </button>
-                </Link>
-              </>
-            )}
-            <Link to="/carta" onClick={() => setIsMobileMenuOpen(false)}>
-              <Button
-                variant="default"
-                className="w-full bg-primary text-primary-foreground"
-              >
-                Ver Carta
-              </Button>
-            </Link>
-          </div>
-        )}
+                  Ver Carta
+                </Button>
+              </Link>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 
