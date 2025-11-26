@@ -1,7 +1,7 @@
 import tapa1 from "@/assets/tapas/27.webp";
 import bodillo3 from "@/assets/bodillos/3.webp";
 import tapa15 from "@/assets/tapas/15.webp";
-import bodillo17 from "@/assets/bodillos/17.webp";
+import bodillo10 from "@/assets/bodillos/10.webp";
 
 const dishes = [
   {
@@ -14,7 +14,7 @@ const dishes = [
       Tropezón.\n`,
   },
   {
-    image: bodillo17,
+    image: bodillo10,
     title: "Kapsule Korp (NEW)",
     description: "Pan brioche, pulled pork casero con cebolla morada y alioli.",
   },
